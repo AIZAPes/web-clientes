@@ -1,0 +1,67 @@
+{
+  "_ayuda": "Catálogo de Pultrusión Canarias. Mismo formato de ficha que pid-agua.json. Una sección con \"borrador\": true aparece como hueco reservado y no genera página hasta que se complete y se quite esa marca.",
+  "id": "pultrusion-canarias",
+  "nombre": "Pultrusión Canarias",
+  "tema": "pultrusion",
+  "logo": "img/logos/pultrusion-canarias.png",
+  "claim": "Perfiles de plásticos reforzados con fibra",
+  "resumen": "Fabricación y soluciones estructurales en PRFV (poliéster reforzado con fibra de vidrio).",
+  "imagen": "",
+  "alt": "Perfiles de PRFV fabricados por pultrusión",
+  "destacados": ["Perfiles de PRFV", "Estructuras de PRFV", "Información técnica y presupuestos"],
+  "seo": {
+    "titulo": "Pultrusión Canarias | Perfiles y estructuras de PRFV",
+    "descripcion": "Pultrusión Canarias, división de Grupo PID: fabricación de perfiles pultrusionados y estructuras de PRFV (poliéster reforzado con fibra de vidrio)."
+  },
+  "hero": {
+    "titulo": "Pultrusión de PRFV y soluciones estructurales",
+    "texto": "Fabricación de perfiles y soluciones estructurales en poliéster reforzado con fibra de vidrio.",
+    "provisional": true
+  },
+  "tecnologia": {
+    "titulo": "La tecnología de pultrusión",
+    "texto": "La pultrusión es un proceso de fabricación continuo en el que las fibras de refuerzo se impregnan de resina y se hacen pasar por un molde calefactado que da forma al perfil y cura la resina. El resultado son perfiles de sección constante en la longitud que se necesite.",
+    "pasos": ["Refuerzo de fibra de vidrio", "Impregnación en resina", "Conformado y curado en molde caliente", "Corte a medida"],
+    "imagen": "",
+    "provisional": true
+  },
+  "ventajas": {
+    "_ayuda": "Propiedades generales del PRFV. Validar con la empresa antes de publicar y sustituir por datos de sus propios productos.",
+    "items": [
+      { "titulo": "Resistencia a la corrosión", "texto": "No se oxida y soporta ambientes húmedos, salinos y químicos." },
+      { "titulo": "Ligereza", "texto": "Mucho más ligero que el acero, lo que facilita el transporte y el montaje." },
+      { "titulo": "Aislamiento eléctrico", "texto": "Material no conductor de la electricidad." },
+      { "titulo": "Bajo mantenimiento", "texto": "No necesita pintura de protección periódica." }
+    ],
+    "provisional": true
+  },
+  "aplicaciones": {
+    "_ayuda": "Sectores propuestos a validar por la empresa.",
+    "items": ["Tratamiento de aguas", "Industria química", "Entornos marinos y costeros", "Instalaciones eléctricas", "Plataformas y pasarelas", "Construcción y arquitectura"],
+    "provisional": true
+  },
+  "secciones": [
+    {
+      "slug": "perfiles-prfv",
+      "nombre": "Perfiles de PRFV",
+      "resumen": "Perfiles de plásticos reforzados con fibra fabricados por pultrusión.",
+      "descripcion": "Perfiles de PRFV obtenidos mediante pultrusión. Esta ficha recogerá las secciones, dimensiones y acabados disponibles.",
+      "imagen": "", "alt": "Perfiles de PRFV pultrusionados",
+      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "provisional": true,
+      "seo": { "titulo": "Perfiles de PRFV por pultrusión | Pultrusión Canarias", "descripcion": "Perfiles de PRFV fabricados por pultrusión en Canarias. Solicita información técnica y presupuesto a Pultrusión Canarias, de Grupo PID." }
+    },
+    {
+      "slug": "estructuras-prfv",
+      "nombre": "Estructuras de PRFV",
+      "resumen": "Soluciones estructurales en poliéster reforzado con fibra de vidrio.",
+      "descripcion": "Estructuras en PRFV para aplicaciones industriales. Esta ficha recogerá los tipos de estructura, sus usos y sus especificaciones.",
+      "imagen": "", "alt": "Estructura de PRFV",
+      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "provisional": true,
+      "seo": { "titulo": "Estructuras de PRFV | Pultrusión Canarias", "descripcion": "Estructuras de PRFV (poliéster reforzado con fibra de vidrio) para la industria. Solicita información técnica a Pultrusión Canarias, de Grupo PID." }
+    },
+    { "slug": "categoria-3", "nombre": "Categoría pendiente", "resumen": "Espacio reservado para una nueva línea de producto.", "borrador": true },
+    { "slug": "categoria-4", "nombre": "Categoría pendiente", "resumen": "Espacio reservado para una nueva línea de producto.", "borrador": true }
+  ]
+}

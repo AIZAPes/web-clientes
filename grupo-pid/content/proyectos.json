@@ -1,0 +1,65 @@
+{
+  "_ayuda": "Proyectos realizados. division: pid-agua | pultrusion-canarias | piscinas-optimus. imagen: ruta dentro de src/static/ (p. ej. img/proyectos/obra-1.webp). Los proyectos sin imagen y con pendiente:true son huecos de ejemplo: bórralos al añadir los reales.",
+  "proyectos": [
+    {
+      "titulo": "Instalación de depósitos",
+      "division": "pid-agua",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    },
+    {
+      "titulo": "Estructura de PRFV",
+      "division": "pultrusion-canarias",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    },
+    {
+      "titulo": "Instalación de piscina",
+      "division": "piscinas-optimus",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    },
+    {
+      "titulo": "Depuradora",
+      "division": "pid-agua",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    },
+    {
+      "titulo": "Perfiles a medida",
+      "division": "pultrusion-canarias",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    },
+    {
+      "titulo": "Piscina terminada",
+      "division": "piscinas-optimus",
+      "lugar": "",
+      "anio": "",
+      "imagen": "",
+      "alt": "",
+      "descripcion": "",
+      "pendiente": true
+    }
+  ]
+}

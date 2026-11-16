@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "grupo-pid", "runtimeExecutable": "node", "runtimeArgs": ["tools/servir.mjs", "5180"], "port": 5180 }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "_ayuda": "Datos generales de Grupo PID. Los campos vacíos se muestran en la web como 'pendiente'. No inventar datos.",
+  "nombre": "Grupo PID",
+  "nombreCompleto": "Grupo PID Canarias",
+  "razonSocial": "",
+  "cif": "",
+  "dominio": "",
+  "lema": "Soluciones avanzadas en PRFV, tratamiento de agua y pultrusión",
+  "modoRevision": true,
+
+  "contacto": {
+    "telefono": "",
+    "whatsapp": "",
+    "email": "",
+    "direccion": "",
+    "horario": "",
+    "mapaUrl": ""
+  },
+
+  "emailsDestino": {
+    "_ayuda": "A quién llega cada solicitud del formulario según la división elegida. Si una está vacía, se usa 'general'.",
+    "general": "",
+    "pid-agua": "",
+    "pultrusion-canarias": "",
+    "piscinas-optimus": ""
+  },
+
+  "formulario": {
+    "endpoint": "/enviar.php",
+    "maxArchivosMB": 10,
+    "tiposArchivo": ".pdf,.jpg,.jpeg,.png,.webp,.dwg,.dxf,.zip"
+  },
+
+  "google": {
+    "searchConsoleVerificacion": "",
+    "analyticsId": ""
+  },
+
+  "redes": {
+    "linkedin": "",
+    "instagram": "",
+    "facebook": "",
+    "youtube": ""
+  },
+
+  "areas": [
+    { "icono": "capas", "nombre": "PRFV" },
+    { "icono": "gota", "nombre": "Tratamiento de agua" },
+    { "icono": "almohadilla", "nombre": "Pultrusión" },
+    { "icono": "escalera", "nombre": "Piscinas" },
+    { "icono": "engranaje", "nombre": "Mantenimientos e ingeniería" }
+  ],
+
+  "cifras": [
+    { "valor": "", "etiqueta": "Años de experiencia" },
+    { "valor": "", "etiqueta": "Proyectos realizados" },
+    { "valor": "", "etiqueta": "Capacidad de fabricación" },
+    { "valor": "", "etiqueta": "Islas / zonas de servicio" }
+  ],
+
+  "inicio": {
+    "seo": {
+      "titulo": "Grupo PID | Soluciones en PRFV, tratamiento de agua y piscinas",
+      "descripcion": "Grupo PID reúne PID Agua, Pultrusión Canarias y Piscinas Optimus: depósitos de PRFV, depuradoras, fosas sépticas, estructuras de PRFV y piscinas."
+    },
+    "titular": "Soluciones avanzadas en PRFV, tratamiento de agua y piscinas",
+    "subtitulo": "Tres divisiones especializadas bajo una misma marca: depósitos y depuración de aguas, perfiles y estructuras de PRFV, y piscinas.",
+    "imagenHero": "",
+    "altHero": "Instalación industrial de Grupo PID"
+  },
+
+  "sobre": {
+    "seo": {
+      "titulo": "Sobre Grupo PID | Empresa y divisiones",
+      "descripcion": "Conoce Grupo PID y sus tres divisiones: PID Agua, Pultrusión Canarias y Piscinas Optimus."
+    },
+    "historia": "",
+    "mision": "",
+    "imagen": ""
+  }
+}

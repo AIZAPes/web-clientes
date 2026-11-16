@@ -1,0 +1,187 @@
+{
+  "_ayuda": "Catálogo de Piscinas Optimus: 8 espacios (7 tipos de piscina + 1 categoría adicional). Al conocer el nombre real de un modelo, cambia nombre, quita nombrePendiente y, si quieres, el slug (la URL); en ese caso añade una redirección en src/static/.htaccess.",
+  "id": "piscinas-optimus",
+  "nombre": "Piscinas Optimus",
+  "tema": "optimus",
+  "logo": "img/logos/piscinas-optimus.png",
+  "claim": "Nueva generación",
+  "resumen": "Soluciones y modelos de piscinas.",
+  "imagen": "",
+  "alt": "Piscina Optimus",
+  "destacados": [
+    "7 tipos de piscina",
+    "Categoría adicional",
+    "Galería de modelos"
+  ],
+  "seo": {
+    "titulo": "Piscinas Optimus | Modelos de piscinas",
+    "descripcion": "Piscinas Optimus, división de Grupo PID: catálogo de modelos de piscinas. Consulta cada modelo y solicita presupuesto."
+  },
+  "hero": {
+    "titulo": "Piscinas de nueva generación",
+    "texto": "Descubre los modelos de Piscinas Optimus y solicita tu presupuesto.",
+    "provisional": true
+  },
+  "secciones": [
+    {
+      "slug": "modelo-1",
+      "nombre": "Modelo 1",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 1",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 1 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 1. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-2",
+      "nombre": "Modelo 2",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 2",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 2 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 2. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-3",
+      "nombre": "Modelo 3",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 3",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 3 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 3. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-4",
+      "nombre": "Modelo 4",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 4",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 4 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 4. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-5",
+      "nombre": "Modelo 5",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 5",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 5 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 5. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-6",
+      "nombre": "Modelo 6",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 6",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 6 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 6. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "modelo-7",
+      "nombre": "Modelo 7",
+      "nombrePendiente": true,
+      "resumen": "Nombre, fotografía y características pendientes.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscina Optimus, modelo 7",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscina Optimus modelo 7 | Piscinas Optimus",
+        "descripcion": "Piscina Optimus modelo 7. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
+      }
+    },
+    {
+      "slug": "categoria-adicional",
+      "nombre": "Categoría adicional",
+      "nombrePendiente": true,
+      "resumen": "Espacio reservado para una categoría adicional.",
+      "descripcion": "",
+      "imagen": "",
+      "alt": "Piscinas Optimus, categoría adicional",
+      "caracteristicas": [],
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Piscinas Optimus | Categoría adicional",
+        "descripcion": "Piscinas Optimus, división de Grupo PID. Solicita presupuesto."
+      }
+    }
+  ]
+}

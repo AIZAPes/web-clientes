@@ -1,0 +1,149 @@
+{
+  "_ayuda": "Catálogo de PID Agua. 'secciones' son las categorías del menú. Una sección con 'productos' es una categoría con fichas hijas; sin 'productos', es una ficha. Campos de ficha: slug, nombre, resumen, descripcion, imagen, alt, aplicaciones[], especificaciones[[nombre, valor]], galeria[{src, alt}], documentos[{titulo, url}], faq[{p, r}], seo{titulo, descripcion}, provisional (true = texto pendiente de validar por la empresa).",
+  "id": "pid-agua",
+  "nombre": "PID Agua",
+  "tema": "agua",
+  "logo": "img/logos/pid-agua.png",
+  "claim": "Tratamiento de aguas residuales",
+  "resumen": "Depósitos de PRFV, tanques modulares, fosas sépticas, depuradoras y mantenimiento de depuradoras.",
+  "imagen": "",
+  "alt": "Depósito de PRFV de PID Agua",
+  "destacados": ["Depósitos de PRFV", "Tanques modulares", "Fosas sépticas", "Depuradoras", "Mantenimiento"],
+  "seo": {
+    "titulo": "PID Agua | Depósitos de PRFV, depuradoras y fosas sépticas",
+    "descripcion": "PID Agua, división de Grupo PID: depósitos de fibra de vidrio (PRFV), tanques modulares, fosas sépticas compactas y biológicas, depuradoras y su mantenimiento."
+  },
+  "hero": {
+    "titulo": "Depósitos y tratamiento de agua",
+    "texto": "Almacenamiento de agua en PRFV, fosas sépticas, depuradoras de aguas residuales y su mantenimiento, desde una sola división especializada.",
+    "provisional": true
+  },
+  "secciones": [
+    {
+      "slug": "depositos-prfv",
+      "letra": "A",
+      "nombre": "Depósitos de fibra PRFV",
+      "resumen": "Depósitos de poliéster reforzado con fibra de vidrio en cuatro configuraciones.",
+      "descripcion": "Depósitos fabricados en PRFV (poliéster reforzado con fibra de vidrio). Elige la configuración que mejor encaja con tu instalación y consulta cada ficha para ver sus aplicaciones y especificaciones.",
+      "imagen": "",
+      "provisional": true,
+      "seo": {
+        "titulo": "Depósitos de PRFV y fibra de vidrio | PID Agua",
+        "descripcion": "Depósitos de fibra de vidrio (PRFV) horizontales, verticales, enterrados y en superficie. Solicita presupuesto a PID Agua, de Grupo PID."
+      },
+      "productos": [
+        {
+          "slug": "depositos-horizontales",
+          "nombre": "Depósitos horizontales",
+          "resumen": "Depósitos de PRFV en disposición horizontal.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) diseñados para instalarse en posición horizontal.",
+          "imagen": "", "alt": "Depósito horizontal de PRFV",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Depósitos horizontales de PRFV | PID Agua", "descripcion": "Depósitos horizontales de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+        },
+        {
+          "slug": "depositos-verticales",
+          "nombre": "Depósitos verticales",
+          "resumen": "Depósitos de PRFV en disposición vertical.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) diseñados para instalarse en posición vertical.",
+          "imagen": "", "alt": "Depósito vertical de PRFV",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Depósitos verticales de PRFV | PID Agua", "descripcion": "Depósitos verticales de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+        },
+        {
+          "slug": "depositos-enterrados",
+          "nombre": "Depósitos enterrados",
+          "resumen": "Depósitos de PRFV para instalación bajo tierra.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) preparados para su instalación enterrada.",
+          "imagen": "", "alt": "Depósito enterrado de PRFV",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Depósitos enterrados de PRFV | PID Agua", "descripcion": "Depósitos enterrados de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+        },
+        {
+          "slug": "depositos-superficie",
+          "nombre": "Depósitos en superficie",
+          "resumen": "Depósitos de PRFV para instalación sobre el terreno.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) para instalación en superficie.",
+          "imagen": "", "alt": "Depósito de PRFV instalado en superficie",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Depósitos de PRFV en superficie | PID Agua", "descripcion": "Depósitos de fibra de vidrio (PRFV) para instalación en superficie. Solicita presupuesto a PID Agua." }
+        }
+      ]
+    },
+    {
+      "slug": "tanques-modulares",
+      "letra": "B",
+      "nombre": "Tanques modulares",
+      "resumen": "Tanques modulares para grandes capacidades.",
+      "descripcion": "Tanques modulares pensados para almacenar grandes volúmenes de agua. En esta ficha se recogerán sus ventajas, aplicaciones y posibilidades de configuración.",
+      "imagen": "", "alt": "Tanque modular de gran capacidad",
+      "bloquesExtra": [
+        { "titulo": "Ventajas", "items": [] },
+        { "titulo": "Posibilidades de configuración", "items": [] }
+      ],
+      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "provisional": true,
+      "seo": { "titulo": "Tanques modulares de gran capacidad | PID Agua", "descripcion": "Tanques modulares para grandes capacidades de almacenamiento de agua. Ventajas, aplicaciones y configuración. PID Agua, Grupo PID." }
+    },
+    {
+      "slug": "fosas-septicas",
+      "letra": "C",
+      "nombre": "Fosas sépticas",
+      "resumen": "Fosas sépticas compactas y biológicas.",
+      "descripcion": "Soluciones de fosas sépticas en dos tipos: compactas y biológicas.",
+      "imagen": "",
+      "provisional": true,
+      "seo": { "titulo": "Fosas sépticas compactas y biológicas | PID Agua", "descripcion": "Fosas sépticas compactas y fosas sépticas biológicas de PID Agua. Consulta cada tipo y solicita presupuesto." },
+      "productos": [
+        {
+          "slug": "fosas-septicas-compactas",
+          "nombre": "Fosas sépticas compactas",
+          "resumen": "Fosas sépticas de formato compacto.",
+          "descripcion": "Fosas sépticas en formato compacto.",
+          "imagen": "", "alt": "Fosa séptica compacta",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Fosas sépticas compactas | PID Agua", "descripcion": "Fosas sépticas compactas de PID Agua. Consulta aplicaciones y especificaciones y solicita presupuesto." }
+        },
+        {
+          "slug": "fosas-septicas-biologicas",
+          "nombre": "Fosas sépticas biológicas",
+          "resumen": "Fosas sépticas con tratamiento biológico.",
+          "descripcion": "Fosas sépticas con tratamiento biológico.",
+          "imagen": "", "alt": "Fosa séptica biológica",
+          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "provisional": true,
+          "seo": { "titulo": "Fosas sépticas biológicas | PID Agua", "descripcion": "Fosas sépticas biológicas de PID Agua. Consulta aplicaciones y especificaciones y solicita presupuesto." }
+        }
+      ]
+    },
+    {
+      "slug": "depuradoras",
+      "letra": "D",
+      "nombre": "Depuradoras",
+      "resumen": "Soluciones de depuración de aguas residuales.",
+      "descripcion": "Soluciones de depuración de aguas residuales. Aquí se presentarán los tipos de depuradora disponibles, sus aplicaciones y sus características.",
+      "imagen": "", "alt": "Depuradora de aguas residuales",
+      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "provisional": true,
+      "seo": { "titulo": "Depuradoras de aguas residuales | PID Agua", "descripcion": "Depuradoras de aguas residuales de PID Agua, división de Grupo PID. Solicita asesoramiento y presupuesto." }
+    },
+    {
+      "slug": "mantenimiento-depuradoras",
+      "letra": "E",
+      "nombre": "Mantenimiento de depuradoras",
+      "resumen": "Mantenimiento, revisión y asistencia técnica.",
+      "descripcion": "Servicio de mantenimiento, revisión y asistencia técnica de depuradoras.",
+      "imagen": "", "alt": "Técnico realizando el mantenimiento de una depuradora",
+      "etiquetaAplicaciones": "Servicios",
+      "aplicaciones": ["Mantenimiento de depuradoras", "Revisión de depuradoras", "Asistencia técnica"],
+      "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "provisional": true,
+      "seo": { "titulo": "Mantenimiento de depuradoras | PID Agua", "descripcion": "Mantenimiento, revisión y asistencia técnica de depuradoras. Servicio de PID Agua, Grupo PID. Solicita presupuesto." }
+    }
+  ]
+}
