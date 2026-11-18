@@ -1,67 +1,182 @@
 {
-  "_ayuda": "Catálogo de Pultrusión Canarias. Mismo formato de ficha que pid-agua.json. Una sección con \"borrador\": true aparece como hueco reservado y no genera página hasta que se complete y se quite esa marca.",
+  "_ayuda": "Catálogo de Pultrusión Canarias. Mismo formato de ficha que pid-agua.json. La división tiene un único producto: Estructuras de PRFV.",
   "id": "pultrusion-canarias",
   "nombre": "Pultrusión Canarias",
   "tema": "pultrusion",
   "logo": "img/logos/pultrusion-canarias.png",
   "claim": "Perfiles de plásticos reforzados con fibra",
   "resumen": "Fabricación y soluciones estructurales en PRFV (poliéster reforzado con fibra de vidrio).",
-  "imagen": "",
-  "alt": "Perfiles de PRFV fabricados por pultrusión",
-  "destacados": ["Perfiles de PRFV", "Estructuras de PRFV", "Información técnica y presupuestos"],
+  "imagen": "img/pultrusion/escalera-pasarela.webp",
+  "alt": "Escalera y pasarela de PRFV con barandillas",
+  "destacados": [
+    "Estructuras de PRFV",
+    "Información técnica y presupuestos"
+  ],
   "seo": {
-    "titulo": "Pultrusión Canarias | Perfiles y estructuras de PRFV",
-    "descripcion": "Pultrusión Canarias, división de Grupo PID: fabricación de perfiles pultrusionados y estructuras de PRFV (poliéster reforzado con fibra de vidrio)."
+    "titulo": "Pultrusión Canarias | Estructuras de PRFV en Tenerife",
+    "descripcion": "Estructuras de PRFV (fibra de vidrio) fabricadas por pultrusión: pasarelas, escaleras, barandillas y plataformas. Pultrusión Canarias, de Grupo PID."
   },
   "hero": {
-    "titulo": "Pultrusión de PRFV y soluciones estructurales",
-    "texto": "Fabricación de perfiles y soluciones estructurales en poliéster reforzado con fibra de vidrio.",
-    "provisional": true
-  },
-  "tecnologia": {
-    "titulo": "La tecnología de pultrusión",
-    "texto": "La pultrusión es un proceso de fabricación continuo en el que las fibras de refuerzo se impregnan de resina y se hacen pasar por un molde calefactado que da forma al perfil y cura la resina. El resultado son perfiles de sección constante en la longitud que se necesite.",
-    "pasos": ["Refuerzo de fibra de vidrio", "Impregnación en resina", "Conformado y curado en molde caliente", "Corte a medida"],
-    "imagen": "",
-    "provisional": true
-  },
-  "ventajas": {
-    "_ayuda": "Propiedades generales del PRFV. Validar con la empresa antes de publicar y sustituir por datos de sus propios productos.",
-    "items": [
-      { "titulo": "Resistencia a la corrosión", "texto": "No se oxida y soporta ambientes húmedos, salinos y químicos." },
-      { "titulo": "Ligereza", "texto": "Mucho más ligero que el acero, lo que facilita el transporte y el montaje." },
-      { "titulo": "Aislamiento eléctrico", "texto": "Material no conductor de la electricidad." },
-      { "titulo": "Bajo mantenimiento", "texto": "No necesita pintura de protección periódica." }
-    ],
+    "titulo": "Estructuras de PRFV",
+    "texto": "Fabricación de estructuras en poliéster reforzado con fibra de vidrio.",
     "provisional": true
   },
   "aplicaciones": {
     "_ayuda": "Sectores propuestos a validar por la empresa.",
-    "items": ["Tratamiento de aguas", "Industria química", "Entornos marinos y costeros", "Instalaciones eléctricas", "Plataformas y pasarelas", "Construcción y arquitectura"],
+    "items": [
+      "Tratamiento de aguas",
+      "Industria química",
+      "Entornos marinos y costeros",
+      "Instalaciones eléctricas",
+      "Plataformas y pasarelas",
+      "Construcción y arquitectura"
+    ],
     "provisional": true
   },
   "secciones": [
-    {
-      "slug": "perfiles-prfv",
-      "nombre": "Perfiles de PRFV",
-      "resumen": "Perfiles de plásticos reforzados con fibra fabricados por pultrusión.",
-      "descripcion": "Perfiles de PRFV obtenidos mediante pultrusión. Esta ficha recogerá las secciones, dimensiones y acabados disponibles.",
-      "imagen": "", "alt": "Perfiles de PRFV pultrusionados",
-      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
-      "provisional": true,
-      "seo": { "titulo": "Perfiles de PRFV por pultrusión | Pultrusión Canarias", "descripcion": "Perfiles de PRFV fabricados por pultrusión en Canarias. Solicita información técnica y presupuesto a Pultrusión Canarias, de Grupo PID." }
-    },
     {
       "slug": "estructuras-prfv",
       "nombre": "Estructuras de PRFV",
       "resumen": "Soluciones estructurales en poliéster reforzado con fibra de vidrio.",
       "descripcion": "Estructuras en PRFV para aplicaciones industriales. Esta ficha recogerá los tipos de estructura, sus usos y sus especificaciones.",
-      "imagen": "", "alt": "Estructura de PRFV",
-      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "imagen": "img/pultrusion/pasarela-prfv.webp",
+      "alt": "Pasarela de PRFV con barandillas y rejilla",
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [
+        {
+          "src": "img/pultrusion/plataforma-presa.webp",
+          "alt": "Plataforma y pasarela de PRFV en una presa"
+        },
+        {
+          "src": "img/pultrusion/escalera-silos.webp",
+          "alt": "Escalera de PRFV junto a silos"
+        },
+        {
+          "src": "img/pultrusion/escalera-silos-2.webp",
+          "alt": "Escalera y barandillas de PRFV"
+        },
+        {
+          "src": "img/pultrusion/pasarela-silos.webp",
+          "alt": "Pasarela de PRFV con barandillas"
+        },
+        {
+          "src": "img/pultrusion/pasarela-ladera.webp",
+          "alt": "Pasarela de PRFV en ladera"
+        },
+        {
+          "src": "img/pultrusion/pasarela-valvulas.webp",
+          "alt": "Pasarela de rejilla de PRFV"
+        },
+        {
+          "src": "img/pultrusion/escalera-deposito.webp",
+          "alt": "Escalera de PRFV con jaula en depósito"
+        },
+        {
+          "src": "img/pultrusion/escalera-gato.webp",
+          "alt": "Escalera de gato de PRFV con jaula"
+        },
+        {
+          "src": "img/pultrusion/plataforma-silos.webp",
+          "alt": "Plataforma de PRFV sobre silos"
+        },
+        {
+          "src": "img/pultrusion/vallado-rejilla.webp",
+          "alt": "Vallado de rejilla de PRFV"
+        }
+      ],
+      "documentos": [],
+      "faq": [],
       "provisional": true,
-      "seo": { "titulo": "Estructuras de PRFV | Pultrusión Canarias", "descripcion": "Estructuras de PRFV (poliéster reforzado con fibra de vidrio) para la industria. Solicita información técnica a Pultrusión Canarias, de Grupo PID." }
-    },
-    { "slug": "categoria-3", "nombre": "Categoría pendiente", "resumen": "Espacio reservado para una nueva línea de producto.", "borrador": true },
-    { "slug": "categoria-4", "nombre": "Categoría pendiente", "resumen": "Espacio reservado para una nueva línea de producto.", "borrador": true }
+      "seo": {
+        "titulo": "Estructuras de PRFV: pasarelas y escaleras | Pultrusión Canarias",
+        "descripcion": "Pasarelas, escaleras, barandillas y plataformas de PRFV fabricadas por pultrusión. Alternativa al hierro en ambientes marinos. Pultrusión Canarias, Grupo PID."
+      },
+      "ventajas": [
+        {
+          "titulo": "Resistencia a la corrosión",
+          "texto": "No se oxida y soporta ambientes húmedos, salinos y químicos."
+        },
+        {
+          "titulo": "Ligereza",
+          "texto": "Mucho más ligero que el acero, lo que facilita el transporte y el montaje."
+        },
+        {
+          "titulo": "Aislamiento eléctrico",
+          "texto": "Material no conductor de la electricidad."
+        },
+        {
+          "titulo": "Bajo mantenimiento",
+          "texto": "No necesita pintura de protección periódica."
+        }
+      ],
+      "comparativa": {
+        "_ayuda": "Propiedades generales del PRFV frente al acero/hierro en ambiente marino (sin cifras). Cada fila: [característica, PRFV, hierro, icono]. Iconos disponibles en src/build.mjs (objeto I). \"destacado\" es la etiqueta sobre la columna PRFV.",
+        "titulo": "PRFV frente al hierro en agua de mar",
+        "intro": "En contacto con el agua de mar y el salitre, el hierro se oxida y pierde resistencia con el tiempo. El PRFV no.",
+        "columnas": [
+          "",
+          "PRFV",
+          "Hierro / acero"
+        ],
+        "filas": [
+          [
+            "Corrosión por agua de mar y salitre",
+            "No se oxida ni se corroe",
+            "Se oxida y pierde sección con el tiempo",
+            "gota"
+          ],
+          [
+            "Mantenimiento",
+            "Sin pintura ni tratamientos periódicos",
+            "Necesita galvanizado, pintura y repintados",
+            "llave"
+          ],
+          [
+            "Peso",
+            "Mucho más ligero",
+            "Pesado",
+            "pluma"
+          ],
+          [
+            "Transporte y montaje",
+            "Se maneja y monta con medios sencillos, sin soldadura",
+            "Requiere maquinaria pesada y soldadura",
+            "camion"
+          ],
+          [
+            "Electricidad",
+            "Aislante, no conduce",
+            "Conductor",
+            "rayo"
+          ],
+          [
+            "Temperatura al tacto bajo el sol",
+            "Se calienta poco",
+            "Se calienta mucho",
+            "sol"
+          ],
+          [
+            "Durabilidad en ambiente marino",
+            "Mantiene sus propiedades",
+            "Se deteriora y hay que sustituir piezas",
+            "reloj"
+          ]
+        ],
+        "destacado": "Recomendado"
+      },
+      "tecnologia": {
+        "titulo": "La tecnología de pultrusión",
+        "texto": "La pultrusión es un proceso de fabricación continuo en el que las fibras de refuerzo se impregnan de resina y se hacen pasar por un molde calefactado que da forma al perfil y cura la resina. El resultado son perfiles de sección constante en la longitud que se necesite.",
+        "pasos": [
+          "Refuerzo de fibra de vidrio",
+          "Impregnación en resina",
+          "Conformado y curado en molde caliente",
+          "Corte a medida"
+        ],
+        "imagen": "img/pultrusion/pasarela-rejilla.webp",
+        "provisional": true
+      }
+    }
   ]
 }

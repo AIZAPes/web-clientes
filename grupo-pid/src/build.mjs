@@ -27,7 +27,11 @@ const visibles = (d) => d.secciones.filter((s) => !s.borrador);
 const rutaDiv = (d) => `/${d.id}/`;
 const rutaSec = (d, s) => `/${d.id}/${s.slug}/`;
 const rutaProd = (d, s, p) => `/${d.id}/${s.slug}/${p.slug}/`;
-const presupuesto = (d, prod) => `/contacto/?division=${d ? d.id : ''}${prod ? '&producto=' + prod : ''}#formulario`;
+/** Tamaño legible de un documento de src/static (p. ej. "PDF · 761 KB"). */
+const tamDoc = (url) => {
+  try { const kb = fs.statSync(path.join(RAIZ, 'src', 'static', url)).size / 1024; return `${path.extname(url).slice(1).toUpperCase()} · ${kb >= 1024 ? (kb / 1024).toFixed(1).replace('.', ',') + ' MB' : Math.round(kb) + ' KB'}`; } catch { return ''; }
+};
+const presupuesto = (d, prod) =>`/contacto/?division=${d ? d.id : ''}${prod ? '&producto=' + prod : ''}#formulario`;
 
 // ───────────────────────── iconos (SVG en línea) ─────────────────────────
 const I = {
@@ -52,7 +56,13 @@ const I = {
   pluma: '<path d="M4 20c4-1 7-4 9-8M14 4l6 6-7 7-6-6 7-7Z"/>',
   rayo: '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
   hoja: '<path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15M5 19l7-7"/>',
+  wa: '<path d="M4 20l1.3-4A8 8 0 1 1 8.4 19L4 20Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2L9 9.5Z"/>',
+  llave: '<path d="M14.5 4.2a4.6 4.6 0 0 0-5 6.3L3.8 16.2a1.9 1.9 0 0 0 2.7 2.7l5.7-5.7a4.6 4.6 0 0 0 6.3-5l-2.8 2.8-2.7-.6-.6-2.7 2.8-2.8c-.2-.3-.4-.5-.7-.7Z"/>',
+  camion: '<path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4.2l3.3 3.6V16h-7.5"/><circle cx="6.5" cy="17.6" r="1.9"/><circle cx="17" cy="17.6" r="1.9"/>',
+  sol: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/>',
 };
+/** Logotipo oficial de WhatsApp (relleno) para el botón flotante. */
+const WA_SVG = '<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2a13.2 13.2 0 0 0 6.6 1.7c7.2 0 13-5.7 13-12.8S23.2 3 16 3Zm0 23.4c-2.1 0-4.1-.6-5.8-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8c0-5.8 4.8-10.5 10.8-10.5s10.8 4.7 10.8 10.5S22 26.4 16 26.4Zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4Z"/></svg>';
 const ico = (n, cls = 'i') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n] || ''}</svg>`;
 
 // ───────────────────────── componentes ─────────────────────────
@@ -68,7 +78,8 @@ function foto(src, alt = '', { clase = '', eager = false, etiqueta = 'Fotografí
 }
 
 /** Logotipo de una marca sobre su placa grafito (como en la imagen de identidad). */
-const placa = (d, cls = '') => `<span class="placa ${cls}"><img src="/${d.logo.replace(/.png$/, ".webp")}" alt="${esc(d.nombre)}" width="400" height="200" decoding="async"></span>`;
+const LOGO_TAM = { 'pid-agua': [406, 156], 'pultrusion-canarias': [440, 203], 'piscinas-optimus': [382, 189] };
+const placa = (d, cls = '') => { const [w, h] = LOGO_TAM[d.id] || [400, 200]; return `<span class="placa ${cls}"><img src="/${d.logo.replace(/\.png$/, '-color.webp')}" alt="${esc(d.nombre)}" width="${w}" height="${h}" decoding="async"></span>`; };
 
 const boton = (href, txt, cls = 'btn') => `<a class="${cls}" href="${href}">${esc(txt)}${ico('flecha')}</a>`;
 
@@ -88,7 +99,8 @@ function cabecera(activo) {
     if (d.id === 'pid-agua') {
       cuerpo = `<div class="mega">${secs.map((s) => `<div class="mega-col"><a class="mega-tit" href="${rutaSec(d, s)}">${esc(s.nombre)}</a>${(s.productos || []).map((p) => `<a href="${rutaProd(d, s, p)}">${esc(p.nombre)}</a>`).join('')}${s.productos ? '' : `<span class="mega-res">${esc(s.resumen)}</span>`}</div>`).join('')}</div>`;
     } else {
-      cuerpo = `<div class="lista">${secs.map((s) => `<a href="${rutaSec(d, s)}">${esc(s.nombre)}</a>`).join('')}${d.tecnologia ? `<a href="${rutaDiv(d)}#tecnologia">Tecnología y ventajas</a>` : ''}</div>`;
+      // La tecnología de pultrusión cuelga de su ficha (Estructuras de PRFV), como subapartado.
+      cuerpo = `<div class="lista">${secs.map((s) => `<a href="${rutaSec(d, s)}"${s.tecnologia ? ' class="lista-padre"' : ''}>${esc(s.nombre)}</a>${s.tecnologia ? `<a class="lista-sub" href="${rutaSec(d, s)}#tecnologia">Tecnología de pultrusión</a>` : ''}`).join('')}</div>`;
     }
     return `<li class="nav-item tiene-sub" data-tema="${d.tema}">
       <div class="nav-fila"><a class="nav-link${activo === d.id ? ' activo' : ''}" href="${rutaDiv(d)}">${esc(d.nombre)}</a><button class="sub-btn" aria-expanded="false" aria-label="Ver productos de ${esc(d.nombre)}">${ico('chevron')}</button></div>
@@ -105,8 +117,6 @@ function cabecera(activo) {
         ${simple('/', 'Inicio', 'inicio')}
         ${DIVS.map(desplegable).join('')}
         ${simple('/proyectos/', 'Proyectos', 'proyectos')}
-        ${simple('/sobre-grupo-pid/', 'Sobre Grupo PID', 'sobre')}
-        ${simple('/contacto/', 'Contacto', 'contacto')}
       </ul>
       <a class="btn btn-cab nav-cta-movil" href="${presupuesto()}">Solicitar presupuesto${ico('flecha')}</a>
     </nav>
@@ -120,10 +130,22 @@ function datoContacto(icono, valor, href, falta) {
   if (vacio(valor)) return REV ? `<li>${ico(icono)}<span class="pend">${esc(falta)}</span></li>` : '';
   return `<li>${ico(icono)}${href ? `<a href="${href}">${esc(valor)}</a>` : `<span>${esc(valor)}</span>`}</li>`;
 }
+/** Enlace de WhatsApp (wa.me) con un mensaje inicial. */
+const waUrl = () => 'https://wa.me/' + site.contacto.whatsapp.replace(/\D/g, '') + '?text=' + encodeURIComponent('Hola, me gustaría recibir información sobre Grupo PID.');
+const botonWhatsApp = () => (site.contacto.whatsapp ? `<a class="wa-flotante" href="${waUrl()}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">${WA_SVG}<span>¿Hablamos?</span></a>` : '');
+
+/** Carrusel infinito de logos de clientes (la lista se duplica para el bucle; la copia se oculta a lectores de pantalla). */
+function carruselClientes() {
+  const logos = site.clientes.logos;
+  const fila = (copia) => logos.map((c) => `<li${copia ? ' aria-hidden="true"' : ''}><img src="/${esc(c.logo)}" alt="${copia ? '' : esc(c.nombre)}" loading="lazy" decoding="async"></li>`).join('');
+  return `<div class="clientes revela"><ul class="clientes-pista">${fila(false)}${fila(true)}</ul></div>`;
+}
+
 const listaContacto = () => {
   const c = site.contacto;
   return `<ul class="contacto-lista">
     ${datoContacto('tel', c.telefono, c.telefono && 'tel:' + c.telefono.replace(/\s/g, ''), 'Teléfono pendiente')}
+    ${c.whatsapp ? datoContacto('wa', 'WhatsApp ' + c.whatsapp, waUrl(), '') : ''}
     ${datoContacto('mail', c.email, c.email && 'mailto:' + c.email, 'Correo pendiente')}
     ${datoContacto('pin', c.direccion, c.mapaUrl, 'Dirección pendiente')}
     ${datoContacto('reloj', c.horario, '', 'Horario pendiente')}
@@ -144,7 +166,7 @@ function pie() {
   </div>
   <div class="pie-base">
     <span>© ${new Date().getFullYear()} ${esc(site.razonSocial || site.nombre)}${site.cif ? ' · CIF ' + esc(site.cif) : ''}</span>
-    <nav aria-label="Enlaces legales"><a href="/proyectos/">Proyectos</a><a href="/sobre-grupo-pid/">Sobre Grupo PID</a><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></nav>
+    <nav aria-label="Enlaces legales"><a href="/proyectos/">Proyectos</a><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></nav>
   </div>
 </footer>`;
 }
@@ -194,7 +216,7 @@ function formulario({ d = null, prod = '', titulo = 'Solicitar presupuesto', int
       <label class="campo"><span>Teléfono *</span><input name="telefono" type="tel" autocomplete="tel" required></label>
       <label class="campo ancho"><span>Correo electrónico *</span><input name="email" type="email" autocomplete="email" required></label>
       <label class="campo ancho"><span>Descripción del proyecto *</span><textarea name="mensaje" rows="5" required placeholder="Ubicación, medidas o capacidades aproximadas, plazos…"></textarea></label>
-      <label class="campo ancho archivo"><span>${ico('clip')} Adjuntar archivos <small>(planos, fotos o documentos · máx. ${f.maxArchivosMB} MB en total)</small></span><input name="adjuntos[]" type="file" multiple accept="${esc(f.tiposArchivo)}" data-max="${f.maxArchivosMB}"><output class="archivos-lista"></output></label>
+      <label class="campo ancho archivo"><span>${ico('clip')} Adjuntar planos o fotos <small>(opcional · máx. ${f.maxArchivosMB} MB)</small></span><input name="adjuntos[]" type="file" multiple accept="${esc(f.tiposArchivo)}" data-max="${f.maxArchivosMB}"><output class="archivos-lista"></output></label>
       <label class="hp" aria-hidden="true">No rellenar<input name="web" tabindex="-1" autocomplete="off"></label>
       <label class="check ancho"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/privacidad/" target="_blank">política de privacidad</a>. *</span></label>
     </div>
@@ -237,6 +259,7 @@ ${cabecera(activo)}
 ${cuerpo}
 </main>
 ${pie()}
+${botonWhatsApp()}
 ${REV ? '<button class="aviso-rev" type="button" onclick="this.hidden=true" title="Ocultar aviso"><strong>Modo revisión</strong> · Las etiquetas amarillas marcan contenido provisional pendiente de datos reales. ✕</button>' : ''}
 <div class="visor" id="visor" hidden><button class="visor-cerrar" aria-label="Cerrar">${ico('cerrar')}</button><img alt=""></div>
 </body>
@@ -260,26 +283,31 @@ const faqLD = (faq) => (vacio(faq) ? null : { '@context': 'https://schema.org', 
 const servicioLD = (d, p) => ({ '@context': 'https://schema.org', '@type': 'Service', name: p.nombre, description: p.descripcion || p.resumen, serviceType: p.nombre, provider: { '@type': 'Organization', name: d.nombre, parentOrganization: { '@type': 'Organization', name: site.nombre } }, ...(p.imagen && DOM ? { image: DOM + '/' + p.imagen } : {}) });
 
 // ───────────────────────── plantillas de página ─────────────────────────
-function heroDivision(d, { foto: f = d.imagen, alt = d.alt } = {}) {
-  return `<section class="dhero" data-tema="${d.tema}">
-    <div class="env dhero-in">
-      <div class="dhero-txt revela">
-        ${placa(d, 'placa-m')}
-        <p class="claim">${esc(d.claim)}</p>
-        <h1>${esc(d.hero.titulo)}</h1>
-        <p class="lead">${esc(d.hero.texto)} ${d.hero.provisional ? pendiente('Texto provisional') : ''}</p>
-        <div class="btns">${boton(presupuesto(d), 'Solicitar presupuesto', 'btn btn-grande')}${boton('#catalogo', 'Ver catálogo', 'btn btn-borde')}</div>
-      </div>
-      <div class="dhero-foto revela">${foto(f, alt, { eager: true, etiqueta: 'Imagen principal pendiente' })}</div>
+function heroDivision(d, { foto: f = d.imagenHero || d.imagen, alt = d.alt } = {}) {
+  return `<section class="phero-foto" data-tema="${d.tema}">
+    <div class="phero-foto-img">${foto(f, alt, { eager: true, etiqueta: 'Imagen principal pendiente' })}</div>
+    <div class="env phero-foto-in">
+      ${placa(d, 'placa-hero')}
+      <h1>${esc(d.hero.titulo)}</h1>
+      <p class="lead">${esc(d.hero.texto)} ${d.hero.provisional ? pendiente('Texto provisional') : ''}</p>
+      <div class="btns">${boton(presupuesto(d), 'Solicitar presupuesto', 'btn btn-grande')}${boton('#catalogo', 'Ver catálogo', 'btn btn-borde-claro')}</div>
     </div>
   </section>`;
 }
 
-const tituloSeccion = (eyebrow, h2, texto = '') => `<header class="sec-cab revela"><p class="eyebrow">${esc(eyebrow)}</p><h2>${esc(h2)}</h2>${texto ? `<p>${texto}</p>` : ''}</header>`;
+/** Cabecera de sección: título y, si hace falta, una frase. (El primer argumento se conserva por compatibilidad y ya no se muestra.) */
+const tituloSeccion = (_eyebrow, h2, texto = '') => `<header class="sec-cab revela"><h2>${esc(h2)}</h2>${texto ? `<p>${texto}</p>` : ''}</header>`;
+
+/** Las tres divisiones como fotos grandes con el nombre encima; cada una es un enlace entero. */
+const mosaicoDivisiones = () => `<div class="mosaico">${DIVS.map((d) => `<a class="mosaico-item revela" data-tema="${d.tema}" href="${rutaDiv(d)}">
+    ${foto(d.imagen, d.alt)}
+    ${placa(d, 'placa-mosaico')}
+    <span class="mosaico-txt"><strong class="sr">${esc(d.nombre)}</strong><span>${esc(d.resumen)}</span><span class="mosaico-ir">Ver ${esc(d.nombre)}${ico('flecha')}</span></span>
+  </a>`).join('')}</div>`;
 
 function seccionFormulario(d, titulo, intro) {
   return `<section class="sec sec-form" id="solicitud"><div class="env form-env">
-    <div class="form-lado revela">${placa(d, 'placa-m')}<h2>${esc(titulo)}</h2><p>${esc(intro)}</p>${listaContacto()}</div>
+    <div class="form-lado revela"><h2>${esc(titulo)}</h2><p>${esc(intro)}</p>${listaContacto()}</div>
     ${formulario({ d, titulo: 'Tu solicitud', intro: 'Los campos con * son obligatorios.' })}
   </div></section>`;
 }
@@ -289,11 +317,34 @@ function fichaProducto(d, p, trail, hermanos = []) {
   const m = migas(trail);
   const esPiscina = d.id === 'piscinas-optimus';
   const lista = (items) => `<ul class="lista-check">${items.map((x) => `<li>${ico('check')}${esc(x)}</li>`).join('')}</ul>`;
-  const bloque = (id, titulo, contenido, faltan) => (contenido ? `<section class="ficha-bloque revela" id="${id}"><h2>${esc(titulo)}</h2>${contenido}</section>` : faltan ? (REV ? `<section class="ficha-bloque revela" id="${id}"><h2>${esc(titulo)}</h2>${huecoPendiente(faltan)}</section>` : '') : '');
-  const docs = vacio(p.documentos) ? '' : `<ul class="docs">${p.documentos.map((x) => `<li><a href="/${esc(x.url)}" download>${ico('doc')}<span>${esc(x.titulo)}</span></a></li>`).join('')}</ul>`;
+  const bloque = (id, titulo, contenido, faltan, cls = '') => (contenido ? `<section class="ficha-bloque revela ${cls}" id="${id}"><h2>${esc(titulo)}</h2>${contenido}</section>` : faltan ? (REV ? `<section class="ficha-bloque revela ${cls}" id="${id}"><h2>${esc(titulo)}</h2>${huecoPendiente(faltan)}</section>` : '') : '');
+  const pasos = (items) => `<ol class="pasos">${items.map((x, i) => `<li><span>${String(i + 1).padStart(2, '0')}</span>${esc(x)}</li>`).join('')}</ol>`;
+  const docs = vacio(p.documentos) ? '' : `<ul class="docs">${p.documentos.map((x) => `<li><a href="/${esc(x.url)}" download>${ico('doc')}<span>${esc(x.titulo)}<small>${tamDoc(x.url)}</small></span></a></li>`).join('')}</ul>`;
   const faq = vacio(p.faq) ? '' : `<div class="faq">${p.faq.map((q) => `<details><summary>${esc(q.p)}${ico('chevron')}</summary><p>${esc(q.r)}</p></details>`).join('')}</div>`;
   const specs = vacio(p.especificaciones) ? '' : `<table class="specs"><tbody>${p.especificaciones.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table>`;
-  const extra = (p.bloquesExtra || []).map((b, i) => bloque('extra-' + i, b.titulo, vacio(b.items) ? '' : lista(b.items), `${b.titulo}: pendiente de información de la empresa.`)).join('');
+  const iconosV = ['escudo', 'pluma', 'rayo', 'hoja'];
+  const ventajas = vacio(p.ventajas) ? '' : `<div class="rejilla r4">${p.ventajas.map((v, i) => `<div class="ventaja">${ico(iconosV[i % 4])}<h3>${esc(v.titulo)}</h3><p>${esc(v.texto)}</p></div>`).join('')}</div>`;
+  const c = p.comparativa;
+  // Tabla comparativa: icono por fila, columna ganadora destacada (con etiqueta "destacado") y, en móvil, una tarjeta por fila (data-label).
+  const comparativa = !c || vacio(c.filas) ? '' : `${c.intro ? `<p>${esc(c.intro)}</p>` : ''}<div class="tabla-comp"><table class="comparativa">
+    <thead><tr>${c.columnas.map((x, i) => (i === 0 ? `<th scope="col"><span class="sr">${esc(x || 'Característica')}</span></th>` : `<th scope="col" class="${i === 1 ? 'gana' : 'pierde'}">${i === 1 && c.destacado ? `<span class="comp-etiqueta">${esc(c.destacado)}</span>` : ''}${esc(x)}</th>`)).join('')}</tr></thead>
+    <tbody>${c.filas.map(([k, a, b, icono]) => `<tr><th scope="row">${icono ? `<span class="comp-ico">${ico(icono)}</span>` : ''}<span>${esc(k)}</span></th><td class="gana" data-label="${esc(c.columnas[1])}">${ico('check')}<span>${esc(a)}</span></td><td class="pierde" data-label="${esc(c.columnas[2])}">${ico('cerrar')}<span>${esc(b)}</span></td></tr>`).join('')}</tbody>
+  </table></div>`;
+  // Bloques adicionales: lista con marcas o, con "numerado": true, pasos numerados a todo el ancho.
+  const extra = (p.bloquesExtra || []).map((b, i) => bloque('extra-' + i, b.titulo, vacio(b.items) ? '' : b.numerado ? pasos(b.items) : lista(b.items), `${b.titulo}: pendiente de información de la empresa.`, b.numerado ? 'ancho' : '')).join('');
+  const t = p.tecnologia;
+  const tecnologia = !t ? '' : `<div class="tecno"><div><p class="lead">${esc(t.texto)} ${t.provisional ? pendiente('Texto a validar') : ''}</p>${pasos(t.pasos)}</div>${t.imagen ? foto(t.imagen, 'Proceso de pultrusión de PRFV', { clase: 'foto-alta' }) : ''}</div>`;
+  /** Datos clave bajo la descripción (p. ej. medidas, profundidad y capacidad de una piscina). */
+  const datos = vacio(p.datos) ? '' : `<dl class="datos">${p.datos.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+  const pdf = vacio(p.documentos) ? '' : p.documentos[0];
+  const botonDocs = !docs ? '' : esPiscina ? `<a class="btn btn-borde" href="/${esc(pdf.url)}" download>${ico('doc')}Descargar ficha técnica (PDF)</a>` : boton('#documentacion', 'Documentación técnica', 'btn btn-borde');
+  const listaPiscina = vacio(p.caracteristicas) ? p.aplicaciones : p.caracteristicas;
+  const bloqueVentajas = esPiscina
+    ? bloque('caracteristicas', p.etiquetaAplicaciones || 'Características', vacio(listaPiscina) ? '' : lista(listaPiscina), 'Características del modelo pendientes.')
+    : bloque('aplicaciones', p.etiquetaAplicaciones || 'Aplicaciones y usos', vacio(p.aplicaciones) ? '' : lista(p.aplicaciones), 'Aplicaciones y usos pendientes de información de la empresa.');
+  const bloqueSpecs = bloque('especificaciones', 'Características técnicas', specs, 'Especificaciones técnicas (dimensiones, capacidades, certificaciones…) pendientes de facilitar por la empresa.');
+  const bloqueDocs = bloque('documentacion', esPiscina ? 'Ficha técnica' : 'Documentación técnica', docs ? (esPiscina ? `<p>Medidas, equipamiento y proceso de instalación del modelo ${esc(p.nombre.replace('Modelo ', ''))}.</p>` : '') + docs : '', 'Fichas técnicas o catálogos en PDF, si existen.');
+  const bloqueGaleria = bloque('galeria', 'Galería', vacio(p.galeria) ? '' : galeria(p.galeria, p.nombre), 'Galería fotográfica pendiente.');
 
   const cuerpo = `
   <div class="ficha" data-tema="${d.tema}">
@@ -304,17 +355,17 @@ function fichaProducto(d, p, trail, hermanos = []) {
         <a class="ficha-div" href="${rutaDiv(d)}">${esc(d.nombre)}</a>
         <h1>${esc(p.nombre)}${p.nombrePendiente ? ' ' + pendiente('Nombre pendiente') : ''}</h1>
         ${p.descripcion ? `<p class="lead">${esc(p.descripcion)} ${p.provisional ? pendiente('Texto provisional') : ''}</p>` : huecoPendiente('Descripción pendiente.')}
-        <div class="btns">${boton(presupuesto(d, p.slug), 'Solicitar presupuesto', 'btn btn-grande')}${docs ? boton('#documentacion', 'Documentación técnica', 'btn btn-borde') : ''}</div>
+        ${datos}
+        <div class="btns">${boton(presupuesto(d, p.slug), 'Solicitar presupuesto', 'btn btn-grande')}${botonDocs}</div>
       </div>
     </section>
     <div class="env ficha-cuerpo">
       ${esPiscina
-        ? bloque('caracteristicas', 'Características', vacio(p.caracteristicas) ? '' : lista(p.caracteristicas), 'Características del modelo pendientes.')
-        : bloque('aplicaciones', p.etiquetaAplicaciones || 'Aplicaciones y usos', vacio(p.aplicaciones) ? '' : lista(p.aplicaciones), 'Aplicaciones y usos pendientes de información de la empresa.')}
-      ${extra}
-      ${bloque('especificaciones', 'Características técnicas', specs, 'Especificaciones técnicas (dimensiones, capacidades, certificaciones…) pendientes de facilitar por la empresa.')}
-      ${bloque('galeria', 'Galería', vacio(p.galeria) ? '' : galeria(p.galeria, p.nombre), 'Galería fotográfica pendiente.')}
-      ${bloque('documentacion', 'Documentación técnica', docs, 'Fichas técnicas o catálogos en PDF, si existen.')}
+        ? `${bloqueSpecs}${bloqueVentajas}${bloqueDocs}${bloqueGaleria}`
+        : `${bloque('tecnologia', t ? t.titulo : '', tecnologia, '')}${bloqueVentajas}
+      ${bloque('ventajas', 'Ventajas del PRFV', ventajas, '')}
+      ${bloque('comparativa', c ? c.titulo : '', comparativa, '')}
+      ${extra}${bloqueSpecs}${bloqueGaleria}${bloqueDocs}`}
       ${bloque('preguntas', 'Preguntas frecuentes', faq, 'Preguntas frecuentes, cuando haya información suficiente.')}
     </div>
     ${hermanos.length ? `<section class="sec sec-gris"><div class="env">${tituloSeccion(d.nombre, 'Otras soluciones relacionadas')}<div class="rejilla r3">${hermanos.map(([h, x]) => tarjetaProducto(h, x)).join('')}</div></div></section>` : ''}
@@ -323,44 +374,50 @@ function fichaProducto(d, p, trail, hermanos = []) {
   return { cuerpo, ld: [m.ld, servicioLD(d, p), faqLD(p.faq)] };
 }
 
+/** Hueco de las reseñas de Google (site.json → resenas). Va oculto: js/site.js lo rellena con /resenas.php y solo lo muestra si Google responde.
+ *  Requisitos de Google: autor con foto y enlace, enlace a cada reseña, aviso de orden y atribución «Google Maps» en el mismo bloque. */
+function resenasGoogle() {
+  const r = site.resenas;
+  if (!r || !r.activo || !(r.placeId || r.busqueda)) return '';
+  return `<section class="sec sec-gris sec-resenas" id="resenas" data-api="/resenas.php" hidden>
+    <div class="env">
+      <header class="sec-cab"><h2>${esc(r.titulo)}</h2></header>
+      <div class="resenas-caja">
+        <div class="resenas-resumen"></div>
+        <div class="resenas"></div>
+        <p class="resenas-aviso">Reseñas de Google Maps ordenadas por relevancia, sin filtrar. Google no verifica las reseñas, pero retira el contenido falso cuando lo detecta. <a href="https://support.google.com/contributionpolicy/answer/7422880?hl=es" target="_blank" rel="noopener">Más información</a></p>
+      </div>
+    </div>
+  </section>`;
+}
+
 // ───────────────────────── páginas ─────────────────────────
 function paginaInicio() {
   const s = site.inicio;
   const cuerpo = `
   <section class="hero">
-    <div class="hero-fondo">${s.imagenHero ? foto(s.imagenHero, s.altHero, { eager: true }) : `<div class="hero-patron" aria-hidden="true"></div>${REV ? '<span class="pend hero-pend">Imagen industrial pendiente</span>' : ''}`}</div>
+    <div class="hero-foto">${foto(s.imagenHero, s.altHero, { eager: true })}</div>
     <div class="env hero-in">
-      <p class="eyebrow claro revela">Grupo PID Canarias</p>
-      <h1 class="revela">${esc(s.titular)}</h1>
-      <p class="lead revela">${esc(s.subtitulo)}</p>
-      <div class="btns revela">${boton(presupuesto(), 'Solicitar presupuesto', 'btn btn-grande')}${boton('#divisiones', 'Ver divisiones', 'btn btn-borde-claro')}</div>
-    </div>
-    <div class="env hero-areas revela">${areas()}</div>
-  </section>
-
-  <section class="sec" id="divisiones">
-    <div class="env">
-      ${tituloSeccion('Nuestras divisiones', 'Elige la solución que necesitas', 'Tres marcas especializadas bajo el paraguas de Grupo PID.')}
-      <div class="divisiones">
-        ${DIVS.map((d) => `<article class="division revela" data-tema="${d.tema}">
-          <a class="division-foto" href="${rutaDiv(d)}" tabindex="-1" aria-hidden="true">${foto(d.imagen, d.alt)}</a>
-          <div class="division-txt">
-            ${placa(d, 'placa-m')}
-            <h3 class="sr">${esc(d.nombre)}</h3>
-            <p>${esc(d.resumen)}</p>
-            <ul class="lista-check">${d.destacados.map((x) => `<li>${ico('check')}${esc(x)}</li>`).join('')}</ul>
-            ${boton(rutaDiv(d), 'Descubrir soluciones', 'btn btn-division')}
-          </div>
-        </article>`).join('')}
+      <div class="hero-txt">
+        <h1 class="revela">${esc(s.titular)}</h1>
+        <p class="lead revela">${esc(s.subtitulo)}</p>
+        <div class="btns revela">${boton(presupuesto(), 'Solicitar presupuesto', 'btn btn-grande')}${boton('#divisiones', 'Ver divisiones', 'btn btn-borde-claro')}</div>
       </div>
     </div>
   </section>
-
-  <section class="sec sec-oscura">
+  ${resenasGoogle()}
+  <section class="sec" id="divisiones">
     <div class="env">
-      ${tituloSeccion('Grupo PID en cifras', 'Experiencia y capacidad industrial')}
-      ${cifras()}
+      ${tituloSeccion('', 'Nuestras divisiones')}
+      ${mosaicoDivisiones()}
     </div>
+  </section>
+
+  <section class="sec sec-gris sec-clientes">
+    <div class="env">
+      ${tituloSeccion('Nuestros clientes', site.clientes.titulo)}
+    </div>
+    ${carruselClientes()}
   </section>
 
   <section class="sec">
@@ -400,29 +457,27 @@ function paginaPidAgua(d) {
 }
 
 function paginaPultrusion(d) {
-  const t = d.tecnologia;
-  const iconosV = ['escudo', 'pluma', 'rayo', 'hoja'];
+  // La tecnología de pultrusión se explica en la ficha de Estructuras de PRFV (secciones[0].tecnologia).
   const cuerpo = `${heroDivision(d)}
-  <section class="sec" id="tecnologia"><div class="env dos-col">
-    <div class="revela">
-      <p class="eyebrow">Tecnología</p><h2>${esc(t.titulo)}</h2>
-      <p class="lead">${esc(t.texto)} ${t.provisional ? pendiente('Texto a validar') : ''}</p>
-      <ol class="pasos">${t.pasos.map((x, i) => `<li><span>${String(i + 1).padStart(2, '0')}</span>${esc(x)}</li>`).join('')}</ol>
-    </div>
-    <div class="revela">${foto(t.imagen, 'Proceso de pultrusión de PRFV', { clase: 'foto-alta' })}</div>
-  </div></section>
   <section class="sec sec-gris" id="catalogo"><div class="env">
-    ${tituloSeccion('Soluciones', 'Estructuras y perfiles en PRFV', 'Categorías preparadas para ampliarse con la gama de productos de Pultrusión Canarias.')}
-    <div class="rejilla r4">${d.secciones.map((s) => (s.borrador ? (REV ? `<div class="tarjeta tarjeta-vacia revela"><div class="tarjeta-foto">${foto('', '', { etiqueta: 'Espacio reservado' })}</div><div class="tarjeta-txt"><h3>${esc(s.nombre)}</h3><p>${esc(s.resumen)}</p>${pendiente('Por definir')}</div></div>` : '') : tarjetaProducto(rutaSec(d, s), s))).join('')}</div>
+    ${visibles(d).length === 1
+      ? (() => { const s = visibles(d)[0]; return `<p class="eyebrow">Nuestra solución</p>
+    <article class="producto-unico revela">
+      <a class="producto-unico-foto" href="${rutaSec(d, s)}" tabindex="-1" aria-hidden="true">${foto(s.imagen, s.alt || s.nombre)}</a>
+      <div class="producto-unico-txt">
+        <h2><a href="${rutaSec(d, s)}">${esc(s.nombre)}</a></h2>
+        <p class="lead">${esc(s.resumen)}</p>
+        <div class="btns">${boton(rutaSec(d, s), 'Ver ficha', 'btn')}${boton(presupuesto(d, s.slug), 'Solicitar presupuesto', 'btn btn-borde')}</div>
+      </div>
+    </article>`; })()
+      : `${tituloSeccion('Soluciones', 'Productos de Pultrusión Canarias')}
+    <div class="rejilla r4">${d.secciones.map((s) => (s.borrador ? (REV ? `<div class="tarjeta tarjeta-vacia revela"><div class="tarjeta-foto">${foto('', '', { etiqueta: 'Espacio reservado' })}</div><div class="tarjeta-txt"><h3>${esc(s.nombre)}</h3><p>${esc(s.resumen)}</p>${pendiente('Por definir')}</div></div>` : '') : tarjetaProducto(rutaSec(d, s), s))).join('')}</div>`}
   </div></section>
-  <section class="sec"><div class="env">
-    ${tituloSeccion('Ventajas', 'Por qué elegir PRFV', d.ventajas.provisional ? pendiente('Propiedades generales del material: validar con la empresa') : '')}
-    <div class="rejilla r4">${d.ventajas.items.map((v, i) => `<div class="ventaja revela">${ico(iconosV[i % 4])}<h3>${esc(v.titulo)}</h3><p>${esc(v.texto)}</p></div>`).join('')}</div>
-  </div></section>
-  <section class="sec sec-oscura"><div class="env">
+  ${/* Aplicaciones genéricas: solo se publican cuando la empresa las valide (sin "provisional") o en modo revisión. */ ''}
+  ${!d.aplicaciones.provisional || REV ? `<section class="sec sec-oscura"><div class="env">
     ${tituloSeccion('Aplicaciones industriales', 'Dónde se utiliza el PRFV', d.aplicaciones.provisional ? pendiente('Sectores propuestos: validar con la empresa') : '')}
     <ul class="aplicaciones revela">${d.aplicaciones.items.map((x) => `<li>${ico('almohadilla')}${esc(x)}</li>`).join('')}</ul>
-  </div></section>
+  </div></section>` : ''}
   <section class="sec"><div class="env">
     ${tituloSeccion('Galería', 'Productos y trabajos')}
     ${galeriaProyectos(PROYECTOS.filter((p) => p.division === d.id))}
@@ -434,7 +489,7 @@ function paginaPultrusion(d) {
 function paginaOptimus(d) {
   const cuerpo = `${heroDivision(d)}
   <section class="sec" id="catalogo"><div class="env">
-    ${tituloSeccion('Catálogo', 'Modelos de piscinas Optimus', 'Siete tipos de piscina y una categoría adicional. Entra en cada modelo para ver fotos, características y pedir presupuesto.')}
+    ${tituloSeccion('Catálogo', 'Modelos de piscinas Optimus', 'Piscinas de poliéster de una sola pieza. Entra en cada modelo para ver sus fotos y medidas, descargar la ficha técnica y pedir presupuesto.')}
     <div class="rejilla r4 piscinas">${d.secciones.map((s, i) => tarjetaProducto(rutaSec(d, s), s, `<span class="num">${String(i + 1).padStart(2, '0')}</span>`)).join('')}</div>
   </div></section>
   <section class="sec sec-gris"><div class="env">
@@ -445,18 +500,35 @@ function paginaOptimus(d) {
   pagina({ ruta: rutaDiv(d), titulo: d.seo.titulo, descripcion: d.seo.descripcion, tema: d.tema, activo: d.id, cuerpo, ld: [divLD(d), migas([[d.nombre, rutaDiv(d)]]).ld] });
 }
 
+/** Resuelve referencias "seccion" o "seccion/producto" de la misma división a pares [ruta, ficha]. */
+function relacionados(d, refs = []) {
+  return refs.map((r) => {
+    const [sa, pa] = r.split('/');
+    const s = visibles(d).find((x) => x.slug === sa);
+    if (!s) { avisos.push(`Relacionado no encontrado: ${d.id}/${r}`); return null; }
+    if (!pa) return [rutaSec(d, s), s];
+    const p = (s.productos || []).find((x) => x.slug === pa);
+    if (!p) { avisos.push(`Relacionado no encontrado: ${d.id}/${r}`); return null; }
+    return [rutaProd(d, s, p), p];
+  }).filter(Boolean);
+}
+
 function paginasCatalogo(d) {
   const secs = visibles(d);
   for (const s of secs) {
     if (s.productos) {
       const m = migas([[d.nombre, rutaDiv(d)], [s.nombre, rutaSec(d, s)]]);
+      const rel = relacionados(d, s.relacionados);
       const cuerpo = `<div class="ficha" data-tema="${d.tema}"><div class="env">${m.html}</div>
         <section class="env cat-cab revela"><a class="ficha-div" href="${rutaDiv(d)}">${esc(d.nombre)}</a><h1>${esc(s.nombre)}</h1><p class="lead">${esc(s.descripcion)} ${s.provisional ? pendiente('Texto provisional') : ''}</p></section>
-        <section class="sec sec-arriba"><div class="env"><div class="rejilla ${s.productos.length > 3 ? 'r4' : 'r2'}">${s.productos.map((p) => tarjetaProducto(rutaProd(d, s, p), p)).join('')}</div></div></section>
+        <section class="sec sec-arriba"><div class="env"><div class="rejilla ${s.productos.length > 3 ? (s.productos.length % 3 === 0 ? 'r3' : 'r4') : 'r2'}">${s.productos.map((p) => tarjetaProducto(rutaProd(d, s, p), p)).join('')}</div></div></section>
+        ${rel.length ? `<section class="sec sec-gris"><div class="env">${tituloSeccion('', 'También te puede interesar')}<div class="rejilla r3">${rel.map(([h, x]) => tarjetaProducto(h, x)).join('')}</div></div></section>` : ''}
         ${ctaBanda(d, '', `¿Qué ${s.nombre.toLowerCase()} necesitas?`, 'Te ayudamos a elegir el tipo adecuado para tu instalación.')}</div>`;
       pagina({ ruta: rutaSec(d, s), titulo: s.seo.titulo, descripcion: s.seo.descripcion, tema: d.tema, activo: d.id, cuerpo, ld: [m.ld] });
       for (const p of s.productos) {
-        const her = s.productos.filter((x) => x !== p).map((x) => [rutaProd(d, s, x), x]);
+        // Primero los relacionados de otras categorías (p. ej. depósitos → fosas sépticas) y después hermanos de la misma categoría.
+        const herm = s.productos.filter((x) => x !== p).map((x) => [rutaProd(d, s, x), x]);
+        const her = rel.length ? [...rel, ...herm.slice(0, 3)] : herm;
         const f = fichaProducto(d, p, [[d.nombre, rutaDiv(d)], [s.nombre, rutaSec(d, s)], [p.nombre, rutaProd(d, s, p)]], her);
         pagina({ ruta: rutaProd(d, s, p), titulo: p.seo.titulo, descripcion: p.seo.descripcion, tema: d.tema, activo: d.id, imagen: p.imagen, ...f });
       }
@@ -489,25 +561,33 @@ function paginaSobre() {
     </div>
     <div class="revela">${foto(s.imagen, 'Instalaciones de Grupo PID', { clase: 'foto-alta' })}</div>
   </div></section>
-  <section class="sec sec-gris"><div class="env">${tituloSeccion('Áreas de actividad', 'Lo que hacemos')}${areas()}</div></section>
-  <section class="sec"><div class="env">
-    ${tituloSeccion('Divisiones', 'Nuestras marcas comerciales')}
-    <div class="rejilla r3">${DIVS.map((d) => `<a class="mini-div revela" data-tema="${d.tema}" href="${rutaDiv(d)}">${placa(d, 'placa-m')}<p>${esc(d.resumen)}</p><span class="enlace">Descubrir soluciones${ico('flecha')}</span></a>`).join('')}</div>
+  <section class="sec sec-gris"><div class="env">
+    ${tituloSeccion('', 'Nuestras divisiones')}
+    ${mosaicoDivisiones()}
   </div></section>
-  <section class="sec sec-oscura"><div class="env">${tituloSeccion('Grupo PID en cifras', 'Capacidades')}${cifras()}</div></section>
+  ${site.cifras.some((c) => !vacio(c.valor)) || REV ? `<section class="sec sec-oscura"><div class="env">${tituloSeccion('Grupo PID en cifras', 'Capacidades')}${cifras()}</div></section>` : ''}
   ${ctaBanda(null)}`;
   pagina({ ruta: '/sobre-grupo-pid/', titulo: s.seo.titulo, descripcion: s.seo.descripcion, activo: 'sobre', cuerpo, ld: [orgLD(), m.ld] });
 }
 
 function paginaContacto() {
   const m = migas([['Contacto', '/contacto/']]);
-  const cuerpo = `<section class="phero"><div class="env">${m.html}<h1>Contacto y presupuestos</h1><p class="lead">Elige la división y el producto que te interesa: tu solicitud llegará directamente al equipo correspondiente.</p></div></section>
+  const c = site.contacto;
+  const accion = (icono, etiqueta, valor, href, nueva) => (valor ? `<a class="accion" href="${href}"${nueva ? ' target="_blank" rel="noopener"' : ''}>${ico(icono)}<span><small>${etiqueta}</small>${esc(valor)}</span></a>` : '');
+  const horario = (c.horario || '').split(' · ').filter((x) => !/cerrado/i.test(x));
+  const dir = c.direccionCorta || c.direccion;
+  const cuerpo = `<section class="phero phero-corto"><div class="env">${m.html}<h1>Contacto</h1><p class="lead">Cuéntanos qué necesitas y te respondemos lo antes posible.</p></div></section>
   <section class="sec sec-arriba"><div class="env form-env">
-    <aside class="form-lado revela">
-      <h2>Grupo PID</h2>${listaContacto()}
-      <div class="lado-divs">${DIVS.map((d) => `<a href="${rutaDiv(d)}" data-tema="${d.tema}">${placa(d, 'placa-s')}</a>`).join('')}</div>
+    <aside class="contacto-lado revela">
+      <div class="acciones">
+        ${accion('tel', 'Llámanos', c.telefono, c.telefono && 'tel:' + c.telefono.replace(/\s/g, ''))}
+        ${c.whatsapp ? accion('wa', 'WhatsApp', c.whatsapp, waUrl(), true) : ''}
+        ${accion('mail', 'Escríbenos', c.email, 'mailto:' + c.email)}
+      </div>
+      ${dir ? `<p class="contacto-nota">${ico('pin')}<span>${c.mapaUrl ? `<a href="${esc(c.mapaUrl)}" target="_blank" rel="noopener">${esc(dir)}</a>` : esc(dir)}</span></p>` : ''}
+      ${horario.length ? `<p class="contacto-nota">${ico('reloj')}<span>${horario.map(esc).join('<br>')}</span></p>` : ''}
     </aside>
-    ${formulario({ intro: 'Los campos con * son obligatorios. Puedes adjuntar planos, fotos o documentos.' })}
+    ${formulario({ titulo: 'Pide presupuesto', intro: 'Los campos con * son obligatorios.' })}
   </div></section>`;
   pagina({ ruta: '/contacto/', titulo: 'Contacto y presupuestos | Grupo PID', descripcion: 'Solicita presupuesto o asesoramiento a Grupo PID: PID Agua, Pultrusión Canarias o Piscinas Optimus. Adjunta planos y describe tu proyecto.', activo: 'contacto', cuerpo, ld: [m.ld, orgLD()] });
 }
@@ -522,7 +602,7 @@ function paginasLegales() {
     const m = migas([[t, `/${slug}/`]]);
     pagina({ ruta: `/${slug}/`, titulo: `${t} | Grupo PID`, descripcion: `${t} de la web de Grupo PID.`, cuerpo: `<section class="phero"><div class="env">${m.html}<h1>${t}</h1></div></section><section class="sec sec-arriba"><div class="env texto-legal">${huecoPendiente('Texto legal pendiente de redactar con los datos reales de la empresa. Debe incluir: ' + txt)}${REV ? '' : '<p>Página en preparación.</p>'}</div></section>`, ld: [m.ld] });
   }
-  pagina({ ruta: '/404.html', titulo: 'Página no encontrada | Grupo PID', descripcion: 'La página que buscas no existe.', cuerpo: `<section class="phero error404"><div class="env"><p class="eyebrow">Error 404</p><h1>Página no encontrada</h1><p class="lead">La página que buscas no existe o ha cambiado de dirección.</p><div class="btns">${boton('/', 'Ir al inicio', 'btn btn-grande')}${boton('/contacto/', 'Contactar', 'btn btn-borde')}</div></div></section><section class="sec"><div class="env"><div class="rejilla r3">${DIVS.map((d) => `<a class="mini-div" data-tema="${d.tema}" href="${rutaDiv(d)}">${placa(d, 'placa-m')}<p>${esc(d.resumen)}</p></a>`).join('')}</div></div></section>` });
+  pagina({ ruta: '/404.html', titulo: 'Página no encontrada | Grupo PID', descripcion: 'La página que buscas no existe.', cuerpo: `<section class="phero error404"><div class="env"><p class="eyebrow">Error 404</p><h1>Página no encontrada</h1><p class="lead">La página que buscas no existe o ha cambiado de dirección.</p><div class="btns">${boton('/', 'Ir al inicio', 'btn btn-grande')}${boton('/contacto/', 'Contactar', 'btn btn-borde')}</div></div></section><section class="sec"><div class="env">${mosaicoDivisiones()}</div></section>` });
 }
 
 // ───────────────────────── archivos auxiliares ─────────────────────────
@@ -537,7 +617,11 @@ function auxiliares() {
   const base = DOM || 'https://DOMINIO-PENDIENTE';
   const urls = paginas.filter((r) => r !== '/404.html');
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${base}${u}</loc><lastmod>${HOY}</lastmod><priority>${u === '/' ? '1.0' : u.split('/').length <= 3 ? '0.8' : '0.6'}</priority></url>`).join('\n')}\n</urlset>\n`);
-  fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /enviar.php\n\nSitemap: ${base}/sitemap.xml\n`);
+  fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /enviar.php\nDisallow: /resenas.php\n\nSitemap: ${base}/sitemap.xml\n`);
+  // Configuración de las reseñas de Google (PHP). La clave de la API NO va aquí: va en resenas-clave.php, solo en el hosting.
+  const r = site.resenas || {};
+  const confR = JSON.stringify({ placeId: r.placeId || '', busqueda: r.busqueda || '', idioma: 'es', maxConsultasDia: r.maxConsultasDia || 30 });
+  fs.writeFileSync(path.join(DIST, 'resenas-config.php'), `<?php // GENERADO por src/build.mjs a partir de content/site.json — no editar a mano\nreturn json_decode('${confR.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}', true);\n`);
   // Catálogo para el formulario (división → productos)
   const cat = {};
   for (const d of DIVS) {
@@ -569,7 +653,6 @@ paginaPultrusion(DIVS[1]);
 paginaOptimus(DIVS[2]);
 DIVS.forEach(paginasCatalogo);
 paginaProyectos();
-paginaSobre();
 paginaContacto();
 paginasLegales();
 auxiliares();

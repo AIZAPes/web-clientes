@@ -18,6 +18,8 @@ ErrorDocument 404 /404.html
 
   # El archivo de configuración del formulario no es público
   RewriteRule ^enviar-config\.php$ - [F,L]
+  # Ni la configuración ni la clave de las reseñas de Google son públicas
+  RewriteRule ^resenas-(config|clave)\.php$ - [F,L]
 
   # Redirecciones de URLs renombradas (p. ej. cuando un modelo de piscina reciba su nombre real):
   # RewriteRule ^piscinas-optimus/modelo-1/?$ /piscinas-optimus/NOMBRE-REAL/ [L,R=301]

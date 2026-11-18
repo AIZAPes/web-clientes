@@ -1,0 +1,3 @@
+# Clave de la API de Google Places (reseñas): solo en el hosting, nunca en el repositorio
+src/static/resenas-clave.php
+dist/resenas-clave.php

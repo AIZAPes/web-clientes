@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /enviar.php
+Disallow: /resenas.php
 
 Sitemap: https://DOMINIO-PENDIENTE/sitemap.xml

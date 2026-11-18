@@ -62,6 +62,24 @@ Cuando todo esté completo: `"modoRevision": false` en `site.json` (oculta las e
 
 `enviar.php` (requiere hosting con PHP, como Hostinger) envía cada solicitud, con adjuntos (máx. 10 MB en total; PDF, imágenes, DWG/DXF, ZIP), al correo de la división elegida en `emailsDestino`; si esa división no tiene correo, usa `general`. El campo oculto `web` es una trampa antispam. En la vista previa local el envío muestra un aviso (no hay PHP). Si se prefiere un servicio externo (Formspree, etc.), cambia `formulario.endpoint` en `site.json`.
 
+## Reseñas de Google (portada)
+
+La portada muestra la valoración media y hasta 5 reseñas de Google (las que Google considera más relevantes), en directo desde la API de Google Places. Lo hace `resenas.php` (requiere PHP con cURL); `js/site.js` lo llama en cada visita a la portada. Si no hay clave, Google falla o se llega al límite diario, la sección simplemente no aparece.
+
+- **Condiciones de Google:** no se pueden guardar reseñas ni valoraciones en el servidor, así que se piden en cada visita (solo se guarda el Place ID, que sí está permitido). Hay que mostrar autor con foto y enlace, el enlace a cada reseña, el aviso de orden y la atribución «Google Maps»: la web ya lo hace. No se pueden filtrar reseñas (p. ej. solo las de 5 estrellas) sin avisarlo.
+- **Coste:** la consulta de detalles con reseñas tiene 1.000 llamadas gratis al mes; después cuesta unos 25 USD por cada 1.000. `site.json → resenas.maxConsultasDia` (30 por defecto ≈ 900 al mes) corta antes de pasar del tramo gratuito; si ese día se agota, la sección se oculta hasta el día siguiente.
+
+**Puesta en marcha (en Google Cloud, con la cuenta de la empresa):**
+1. Crear un proyecto en https://console.cloud.google.com y activar una cuenta de facturación (Google la exige aunque no se pase del tramo gratuito).
+2. Activar la API **Places API (New)**.
+3. Crear una **clave de API** y restringirla: en «Restricciones de API», solo Places API (New); en «Restricciones de aplicaciones», «Direcciones IP» con la IP del servidor del hosting.
+4. Opcional pero recomendable: en Places API (New) → Cuotas, limitar las solicitudes diarias (p. ej. 40) como segunda barrera de coste.
+5. En el hosting, junto a `resenas.php`, crear el archivo `resenas-clave.php` con este contenido (y nada más): `<?php return 'LA_CLAVE';`. **No lo subas al repositorio** (está en `.gitignore`). Alternativa: variable de entorno `GOOGLE_PLACES_API_KEY` si el hosting lo permite.
+6. Place ID: si `site.json → resenas.placeId` está vacío, `resenas.php` busca una vez el negocio con el texto de `busqueda` y guarda su ID. Es más seguro poner el Place ID exacto (se obtiene en https://developers.google.com/maps/documentation/places/web-service/place-id) y volver a generar la web.
+7. Comprobar `https://TU-DOMINIO/resenas.php`: debe responder `"ok":true` con el nombre correcto del negocio en `"nombre"`. Si responde `"ok":false`, el campo `"error"` dice qué falta.
+
+Para quitar la sección: `site.json → resenas.activo: false` y volver a generar.
+
 ## SEO y Google Search Console
 
 - Cada página tiene URL limpia, `<title>`, metadescripción, un único H1, H2/H3 jerárquicos, textos alternativos y Open Graph.

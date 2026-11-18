@@ -70,6 +70,53 @@
   });
   if (visor) visor.addEventListener('click', function (e) { if (e.target === visor || e.target.closest('.visor-cerrar')) cerrarVisor(); });
 
+  // Reseñas de Google (portada): se piden en directo a /resenas.php; si no hay respuesta válida, la sección sigue oculta.
+  var secResenas = $('#resenas');
+  if (secResenas && window.fetch) {
+    fetch(secResenas.getAttribute('data-api'), { headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && d.ok && d.resenas && d.resenas.length) pintarResenas(secResenas, d); })
+      .catch(function () {});
+  }
+  function crear(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function enlaceExterno(href, cls, txt) { var a = crear('a', cls, txt); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a; }
+  function estrellas(n) {
+    var k = Math.max(0, Math.min(5, Math.round(n || 0)));
+    var s = crear('span', 'estrellas', '★★★★★'.slice(0, k));
+    s.appendChild(crear('span', '', '★★★★★'.slice(0, 5 - k)));
+    s.setAttribute('role', 'img'); s.setAttribute('aria-label', k + ' de 5 estrellas');
+    return s;
+  }
+  function atribucionGoogle() { var g = crear('span', 'gm-atrib', 'Google Maps'); g.setAttribute('translate', 'no'); return g; }
+  function pintarResenas(sec, d) {
+    var resumen = $('.resenas-resumen', sec), lista = $('.resenas', sec);
+    if (d.valoracion) {
+      resumen.appendChild(crear('strong', '', String(d.valoracion.toFixed(1)).replace('.', ',')));
+      resumen.appendChild(estrellas(d.valoracion));
+      if (d.total) resumen.appendChild(crear('span', 'resenas-total', d.total + (d.total === 1 ? ' reseña' : ' reseñas')));
+    }
+    resumen.appendChild(atribucionGoogle());
+    d.resenas.forEach(function (r) {
+      var fig = crear('figure', 'resena');
+      var autor = crear('div', 'resena-autor');
+      if (r.foto) { var img = crear('img'); img.src = r.foto; img.alt = ''; img.width = 40; img.height = 40; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer'; autor.appendChild(img); }
+      var quien = crear('div');
+      quien.appendChild(r.autorUrl ? enlaceExterno(r.autorUrl, 'resena-nombre', r.autor) : crear('strong', 'resena-nombre', r.autor));
+      if (r.fecha) quien.appendChild(crear('small', '', r.fecha));
+      autor.appendChild(quien);
+      fig.appendChild(autor);
+      fig.appendChild(estrellas(r.estrellas));
+      if (r.texto) fig.appendChild(crear('blockquote', '', r.texto));
+      var pie = crear('figcaption');
+      if (r.traducida) pie.appendChild(crear('small', '', 'Traducida por Google'));
+      if (r.url) pie.appendChild(enlaceExterno(r.url, 'resena-ver', 'Ver en Google Maps'));
+      fig.appendChild(pie);
+      lista.appendChild(fig);
+    });
+    if (d.url) { var p = $('.resenas-aviso', sec); p.appendChild(document.createTextNode(' · ')); p.appendChild(enlaceExterno(d.url, '', 'Ver todas las reseñas en Google Maps')); }
+    sec.hidden = false;
+  }
+
   // Formulario de presupuesto
   var form = $('#formulario');
   if (!form) return;

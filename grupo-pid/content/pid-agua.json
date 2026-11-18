@@ -5,13 +5,18 @@
   "tema": "agua",
   "logo": "img/logos/pid-agua.png",
   "claim": "Tratamiento de aguas residuales",
-  "resumen": "Depósitos de PRFV, tanques modulares, fosas sépticas, depuradoras y mantenimiento de depuradoras.",
-  "imagen": "",
-  "alt": "Depósito de PRFV de PID Agua",
-  "destacados": ["Depósitos de PRFV", "Tanques modulares", "Fosas sépticas", "Depuradoras", "Mantenimiento"],
+  "resumen": "Depósitos de PRFV y tanques modulares, fosas sépticas, depuradoras, proyectos de ingeniería y mantenimiento de depuradoras.",
+  "imagen": "img/agua/depositos-verticales-prfv.webp",
+  "alt": "Depósitos verticales de PRFV de distintos tamaños",
+  "destacados": [
+    "Depósitos de PRFV y tanques modulares",
+    "Fosas sépticas y depuradoras",
+    "Proyectos de ingeniería",
+    "Mantenimiento de depuradoras"
+  ],
   "seo": {
-    "titulo": "PID Agua | Depósitos de PRFV, depuradoras y fosas sépticas",
-    "descripcion": "PID Agua, división de Grupo PID: depósitos de fibra de vidrio (PRFV), tanques modulares, fosas sépticas compactas y biológicas, depuradoras y su mantenimiento."
+    "titulo": "PID Agua | Depósitos de PRFV, fosas sépticas y depuradoras",
+    "descripcion": "Depósitos de fibra de vidrio (PRFV), tanques modulares, fosas sépticas y depuradoras de aguas residuales en Tenerife. PID Agua, de Grupo PID."
   },
   "hero": {
     "titulo": "Depósitos y tratamiento de agua",
@@ -23,127 +28,396 @@
       "slug": "depositos-prfv",
       "letra": "A",
       "nombre": "Depósitos de fibra PRFV",
-      "resumen": "Depósitos de poliéster reforzado con fibra de vidrio en cuatro configuraciones.",
-      "descripcion": "Depósitos fabricados en PRFV (poliéster reforzado con fibra de vidrio). Elige la configuración que mejor encaja con tu instalación y consulta cada ficha para ver sus aplicaciones y especificaciones.",
-      "imagen": "",
+      "resumen": "Depósitos de poliéster reforzado con fibra de vidrio: horizontales, verticales, troncocónicos, estructurados y tanques modulares.",
+      "descripcion": "Depósitos fabricados en PRFV (poliéster reforzado con fibra de vidrio). Elige la configuración que mejor encaja con tu instalación.",
+      "imagen": "img/agua/depositos-verticales-prfv.webp",
       "provisional": true,
       "seo": {
-        "titulo": "Depósitos de PRFV y fibra de vidrio | PID Agua",
-        "descripcion": "Depósitos de fibra de vidrio (PRFV) horizontales, verticales, enterrados y en superficie. Solicita presupuesto a PID Agua, de Grupo PID."
+        "titulo": "Depósitos de fibra de vidrio (PRFV) en Tenerife | PID Agua",
+        "descripcion": "Depósitos de PRFV horizontales, verticales, troncocónicos, estructurados y tanques modulares para agua. PID Agua, de Grupo PID, en Tenerife. Pide presupuesto."
       },
       "productos": [
         {
-          "slug": "depositos-horizontales",
-          "nombre": "Depósitos horizontales",
-          "resumen": "Depósitos de PRFV en disposición horizontal.",
-          "descripcion": "Depósitos de fibra de vidrio (PRFV) diseñados para instalarse en posición horizontal.",
-          "imagen": "", "alt": "Depósito horizontal de PRFV",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "slug": "depositos-horizontales-con-soportes",
+          "nombre": "Depósitos horizontales con soportes",
+          "resumen": "Depósitos de PRFV horizontales sobre soportes.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) en posición horizontal, con soportes integrados para su apoyo.",
+          "imagen": "img/agua/horizontal-soportes.webp",
+          "alt": "Depósito horizontal de PRFV con soportes",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/horizontal-soportes-2.webp",
+              "alt": "Depósito horizontal de PRFV con soportes instalado"
+            },
+            {
+              "src": "img/agua/horizontal-soportes-transporte.webp",
+              "alt": "Transporte de un depósito horizontal de PRFV"
+            },
+            {
+              "src": "img/agua/horizontal-soportes-3.webp",
+              "alt": "Depósito horizontal de PRFV con soportes"
+            },
+            {
+              "src": "img/agua/horizontal-soportes-verde.webp",
+              "alt": "Depósito horizontal de PRFV verde con soportes"
+            },
+            {
+              "src": "img/agua/horizontal-soportes-sala.webp",
+              "alt": "Depósitos horizontales de PRFV conectados en sala técnica"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Depósitos horizontales de PRFV | PID Agua", "descripcion": "Depósitos horizontales de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+          "seo": {
+            "titulo": "Depósitos horizontales de PRFV con soportes | PID Agua",
+            "descripcion": "Depósitos horizontales de fibra de vidrio (PRFV) con soportes integrados para almacenar agua. PID Agua, de Grupo PID, en Tenerife. Pide presupuesto."
+          }
+        },
+        {
+          "slug": "depositos-horizontales-sin-soportes",
+          "nombre": "Depósitos horizontales sin soportes",
+          "resumen": "Depósitos de PRFV horizontales sin soportes.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) en posición horizontal, sin soportes.",
+          "imagen": "img/agua/horizontal-sin-soportes.webp",
+          "alt": "Depósito horizontal de PRFV sin soportes",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/horizontal-sin-soportes-transporte.webp",
+              "alt": "Transporte de un depósito horizontal de PRFV sin soportes"
+            },
+            {
+              "src": "img/agua/horizontal-sin-soportes-varios.webp",
+              "alt": "Depósitos horizontales de PRFV sin soportes"
+            },
+            {
+              "src": "img/agua/horizontal-sin-soportes-incendios.webp",
+              "alt": "Depósitos horizontales de PRFV en instalación contra incendios"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
+          "provisional": true,
+          "seo": {
+            "titulo": "Depósitos horizontales de PRFV sin soportes | PID Agua",
+            "descripcion": "Depósitos horizontales de fibra de vidrio (PRFV) sin soportes para almacenar agua. PID Agua, de Grupo PID, en Tenerife. Mira las fotos y pide presupuesto."
+          }
         },
         {
           "slug": "depositos-verticales",
-          "nombre": "Depósitos verticales",
-          "resumen": "Depósitos de PRFV en disposición vertical.",
-          "descripcion": "Depósitos de fibra de vidrio (PRFV) diseñados para instalarse en posición vertical.",
-          "imagen": "", "alt": "Depósito vertical de PRFV",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "nombre": "Depósitos verticales de fondo plano",
+          "resumen": "Depósitos de PRFV verticales con fondo plano.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) en posición vertical con fondo plano, en distintos tamaños.",
+          "imagen": "img/agua/verticales.webp",
+          "alt": "Depósitos verticales de PRFV de fondo plano",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/vertical-blanco.webp",
+              "alt": "Depósito vertical de PRFV"
+            },
+            {
+              "src": "img/agua/vertical-rojo.webp",
+              "alt": "Depósitos verticales de PRFV rojos"
+            },
+            {
+              "src": "img/agua/vertical-transporte.webp",
+              "alt": "Transporte de depósitos verticales de PRFV"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Depósitos verticales de PRFV | PID Agua", "descripcion": "Depósitos verticales de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+          "seo": {
+            "titulo": "Depósitos verticales de PRFV de fondo plano | PID Agua",
+            "descripcion": "Depósitos verticales de fibra de vidrio (PRFV) de fondo plano en distintos tamaños. PID Agua, de Grupo PID, en Tenerife. Pide presupuesto sin compromiso."
+          }
         },
         {
-          "slug": "depositos-enterrados",
-          "nombre": "Depósitos enterrados",
-          "resumen": "Depósitos de PRFV para instalación bajo tierra.",
-          "descripcion": "Depósitos de fibra de vidrio (PRFV) preparados para su instalación enterrada.",
-          "imagen": "", "alt": "Depósito enterrado de PRFV",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "slug": "depositos-troncoconicos",
+          "nombre": "Depósitos troncocónicos",
+          "resumen": "Depósitos de PRFV de forma troncocónica.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) de forma troncocónica.",
+          "imagen": "img/agua/troncoconico.webp",
+          "alt": "Depósito troncocónico de PRFV",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/troncoconico-colocacion.webp",
+              "alt": "Colocación de un depósito troncocónico de PRFV con grúa"
+            },
+            {
+              "src": "img/agua/troncoconico-obra.webp",
+              "alt": "Depósitos troncocónicos de PRFV en obra"
+            },
+            {
+              "src": "img/agua/troncoconico-interior.webp",
+              "alt": "Interior de un depósito troncocónico de PRFV"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Depósitos enterrados de PRFV | PID Agua", "descripcion": "Depósitos enterrados de fibra de vidrio (PRFV) de PID Agua. Consulta aplicaciones y solicita presupuesto." }
+          "seo": {
+            "titulo": "Depósitos troncocónicos de PRFV | PID Agua",
+            "descripcion": "Depósitos troncocónicos de fibra de vidrio (PRFV) para almacenamiento de agua. PID Agua, de Grupo PID, en Tenerife. Mira las fotos y pide presupuesto."
+          }
         },
         {
-          "slug": "depositos-superficie",
-          "nombre": "Depósitos en superficie",
-          "resumen": "Depósitos de PRFV para instalación sobre el terreno.",
-          "descripcion": "Depósitos de fibra de vidrio (PRFV) para instalación en superficie.",
-          "imagen": "", "alt": "Depósito de PRFV instalado en superficie",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "slug": "depositos-estructurados",
+          "nombre": "Depósitos estructurados",
+          "resumen": "Depósitos de PRFV rectangulares con refuerzos.",
+          "descripcion": "Depósitos de fibra de vidrio (PRFV) de forma rectangular, con estructura de refuerzo.",
+          "imagen": "img/agua/estructurado.webp",
+          "alt": "Depósito estructurado rectangular de PRFV",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/estructurado-2.webp",
+              "alt": "Depósito estructurado de PRFV"
+            },
+            {
+              "src": "img/agua/estructurado-varios.webp",
+              "alt": "Depósitos estructurados de PRFV de varios tamaños"
+            },
+            {
+              "src": "img/agua/estructurado-azul.webp",
+              "alt": "Depósito estructurado de PRFV azul"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Depósitos de PRFV en superficie | PID Agua", "descripcion": "Depósitos de fibra de vidrio (PRFV) para instalación en superficie. Solicita presupuesto a PID Agua." }
+          "seo": {
+            "titulo": "Depósitos estructurados rectangulares de PRFV | PID Agua",
+            "descripcion": "Depósitos rectangulares de fibra de vidrio (PRFV) con estructura de refuerzo. PID Agua, de Grupo PID, en Tenerife. Mira las fotos y pide presupuesto."
+          }
+        },
+        {
+          "slug": "tanques-modulares",
+          "nombre": "Tanques modulares",
+          "resumen": "Tanques modulares para grandes capacidades.",
+          "descripcion": "Tanques modulares pensados para almacenar grandes volúmenes de agua.",
+          "imagen": "img/agua/tanque-modular.webp",
+          "alt": "Tanque modular de PRFV de gran capacidad",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/modular-2.webp",
+              "alt": "Tanques modulares de PRFV en taller"
+            },
+            {
+              "src": "img/agua/modular-montaje.webp",
+              "alt": "Tanque modular de PRFV de Grupo PID"
+            },
+            {
+              "src": "img/agua/modular-gigante.webp",
+              "alt": "Tanque modular de PRFV en montaje"
+            },
+            {
+              "src": "img/agua/modular-cubierta.webp",
+              "alt": "Cubierta de un tanque modular de PRFV"
+            },
+            {
+              "src": "img/agua/modular-elevado.webp",
+              "alt": "Tanque modular de PRFV elevado"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
+          "provisional": true,
+          "seo": {
+            "titulo": "Tanques modulares de PRFV de gran capacidad | PID Agua",
+            "descripcion": "Tanques modulares de fibra de vidrio (PRFV) para almacenar grandes volúmenes de agua. PID Agua, de Grupo PID, en Tenerife. Solicita presupuesto."
+          }
         }
+      ],
+      "alt": "Depósitos verticales de PRFV de distintos tamaños",
+      "relacionados": [
+        "fosas-septicas/fosas-septicas-compactas",
+        "fosas-septicas/fosas-septicas-biologicas",
+        "depuradoras"
       ]
     },
     {
-      "slug": "tanques-modulares",
-      "letra": "B",
-      "nombre": "Tanques modulares",
-      "resumen": "Tanques modulares para grandes capacidades.",
-      "descripcion": "Tanques modulares pensados para almacenar grandes volúmenes de agua. En esta ficha se recogerán sus ventajas, aplicaciones y posibilidades de configuración.",
-      "imagen": "", "alt": "Tanque modular de gran capacidad",
-      "bloquesExtra": [
-        { "titulo": "Ventajas", "items": [] },
-        { "titulo": "Posibilidades de configuración", "items": [] }
-      ],
-      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
-      "provisional": true,
-      "seo": { "titulo": "Tanques modulares de gran capacidad | PID Agua", "descripcion": "Tanques modulares para grandes capacidades de almacenamiento de agua. Ventajas, aplicaciones y configuración. PID Agua, Grupo PID." }
-    },
-    {
       "slug": "fosas-septicas",
-      "letra": "C",
+      "letra": "B",
       "nombre": "Fosas sépticas",
       "resumen": "Fosas sépticas compactas y biológicas.",
       "descripcion": "Soluciones de fosas sépticas en dos tipos: compactas y biológicas.",
-      "imagen": "",
+      "imagen": "img/agua/fosa-septica.webp",
       "provisional": true,
-      "seo": { "titulo": "Fosas sépticas compactas y biológicas | PID Agua", "descripcion": "Fosas sépticas compactas y fosas sépticas biológicas de PID Agua. Consulta cada tipo y solicita presupuesto." },
+      "seo": {
+        "titulo": "Fosas sépticas de PRFV compactas y biológicas | PID Agua",
+        "descripcion": "Fosas sépticas compactas y biológicas de fibra de vidrio (PRFV) para el tratamiento de aguas residuales. PID Agua, de Grupo PID, en Tenerife."
+      },
       "productos": [
         {
           "slug": "fosas-septicas-compactas",
           "nombre": "Fosas sépticas compactas",
           "resumen": "Fosas sépticas de formato compacto.",
           "descripcion": "Fosas sépticas en formato compacto.",
-          "imagen": "", "alt": "Fosa séptica compacta",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "imagen": "img/agua/fosa-compacta-esquema.webp",
+          "alt": "Esquema de fosa séptica con decantador y digestor",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [
+            {
+              "src": "img/agua/fosa-septica.webp",
+              "alt": "Fosa séptica de PRFV"
+            }
+          ],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Fosas sépticas compactas | PID Agua", "descripcion": "Fosas sépticas compactas de PID Agua. Consulta aplicaciones y especificaciones y solicita presupuesto." }
+          "seo": {
+            "titulo": "Fosas sépticas compactas de PRFV | PID Agua",
+            "descripcion": "Fosas sépticas compactas de fibra de vidrio (PRFV) con decantador y digestor. PID Agua, de Grupo PID, en Tenerife. Consulta y pide presupuesto."
+          }
         },
         {
           "slug": "fosas-septicas-biologicas",
           "nombre": "Fosas sépticas biológicas",
           "resumen": "Fosas sépticas con tratamiento biológico.",
           "descripcion": "Fosas sépticas con tratamiento biológico.",
-          "imagen": "", "alt": "Fosa séptica biológica",
-          "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+          "imagen": "img/agua/fosa-biologica-esquema.webp",
+          "alt": "Esquema de fosa séptica con decantador-digestor y filtro biológico percolador",
+          "aplicaciones": [],
+          "especificaciones": [],
+          "galeria": [],
+          "documentos": [],
+          "faq": [],
           "provisional": true,
-          "seo": { "titulo": "Fosas sépticas biológicas | PID Agua", "descripcion": "Fosas sépticas biológicas de PID Agua. Consulta aplicaciones y especificaciones y solicita presupuesto." }
+          "seo": {
+            "titulo": "Fosas sépticas biológicas de PRFV | PID Agua",
+            "descripcion": "Fosas sépticas biológicas de PRFV con decantador-digestor y filtro biológico percolador. PID Agua, de Grupo PID, en Tenerife. Pide presupuesto."
+          }
         }
-      ]
+      ],
+      "alt": "Fosa séptica de PRFV"
     },
     {
       "slug": "depuradoras",
-      "letra": "D",
+      "letra": "C",
       "nombre": "Depuradoras",
-      "resumen": "Soluciones de depuración de aguas residuales.",
-      "descripcion": "Soluciones de depuración de aguas residuales. Aquí se presentarán los tipos de depuradora disponibles, sus aplicaciones y sus características.",
-      "imagen": "", "alt": "Depuradora de aguas residuales",
-      "aplicaciones": [], "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
+      "resumen": "Depuradoras compactas y fosas biológicas de PRFV.",
+      "descripcion": "Equipos de depuración de aguas residuales fabricados en PRFV, como depuradoras compactas y fosas sépticas biológicas.",
+      "imagen": "img/agua/depuradora-fosa-biologica.webp",
+      "alt": "Fosa séptica biológica de PRFV gris con dos tapas de registro",
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [
+        {
+          "src": "img/agua/depuradora-compacta.webp",
+          "alt": "Depuradora compacta de PRFV junto a su arqueta"
+        },
+        {
+          "src": "img/agua/depuradora-gris.webp",
+          "alt": "Fosa séptica biológica de PRFV gris"
+        },
+        {
+          "src": "img/agua/depuradora-gris-lateral.webp",
+          "alt": "Vista lateral de una fosa biológica de PRFV gris"
+        },
+        {
+          "src": "img/agua/depuradora-blanca.webp",
+          "alt": "Fosa biológica de PRFV blanca con boca de salida"
+        },
+        {
+          "src": "img/agua/depuradora-exterior.webp",
+          "alt": "Depuradora de PRFV blanca y arqueta en exterior"
+        },
+        {
+          "src": "img/agua/depuradora-interior.webp",
+          "alt": "Interior de una depuradora de PRFV con relleno plástico"
+        },
+        {
+          "src": "img/agua/depuradora-salida.webp",
+          "alt": "Depuradora de PRFV con tubería de salida"
+        }
+      ],
+      "documentos": [],
+      "faq": [],
       "provisional": true,
-      "seo": { "titulo": "Depuradoras de aguas residuales | PID Agua", "descripcion": "Depuradoras de aguas residuales de PID Agua, división de Grupo PID. Solicita asesoramiento y presupuesto." }
+      "seo": {
+        "titulo": "Depuradoras de aguas residuales compactas | PID Agua",
+        "descripcion": "Depuradoras de aguas residuales de PRFV: equipos compactos y fosas biológicas. PID Agua, de Grupo PID, en Tenerife. Solicita asesoramiento y presupuesto."
+      }
+    },
+    {
+      "slug": "proyectos-ingenieria",
+      "nombre": "Proyectos de ingeniería",
+      "resumen": "",
+      "descripcion": "",
+      "imagen": "img/agua/planos-ingenieria.webp",
+      "alt": "Planos de ingeniería del agua",
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [
+        {
+          "src": "img/agua/depuradora.webp",
+          "alt": "Estación depuradora de aguas residuales con balsas y tamiz"
+        },
+        {
+          "src": "img/agua/planta-tratamiento.webp",
+          "alt": "Planta de tratamiento de agua con depósitos cubiertos"
+        },
+        {
+          "src": "img/agua/edar-proyecto.webp",
+          "alt": "Proyecto de estación depuradora de aguas residuales"
+        },
+        {
+          "src": "img/agua/esquema-depuradora.webp",
+          "alt": "Plano de implantación de una depuradora"
+        }
+      ],
+      "documentos": [],
+      "faq": [],
+      "provisional": true,
+      "seo": {
+        "titulo": "Proyectos de ingeniería del agua y EDAR | PID Agua",
+        "descripcion": "Proyectos de ingeniería del agua de PID Agua: estaciones depuradoras (EDAR), plantas de tratamiento y planos de implantación. Grupo PID, Tenerife."
+      },
+      "letra": "D"
     },
     {
       "slug": "mantenimiento-depuradoras",
-      "letra": "E",
       "nombre": "Mantenimiento de depuradoras",
-      "resumen": "Mantenimiento, revisión y asistencia técnica.",
-      "descripcion": "Servicio de mantenimiento, revisión y asistencia técnica de depuradoras.",
-      "imagen": "", "alt": "Técnico realizando el mantenimiento de una depuradora",
-      "etiquetaAplicaciones": "Servicios",
-      "aplicaciones": ["Mantenimiento de depuradoras", "Revisión de depuradoras", "Asistencia técnica"],
-      "especificaciones": [], "galeria": [], "documentos": [], "faq": [],
-      "provisional": true,
-      "seo": { "titulo": "Mantenimiento de depuradoras | PID Agua", "descripcion": "Mantenimiento, revisión y asistencia técnica de depuradoras. Servicio de PID Agua, Grupo PID. Solicita presupuesto." }
+      "resumen": "Nos desplazamos a tu empresa para limpiar y mantener la depuradora.",
+      "descripcion": "Nos desplazamos a tu empresa para hacer el mantenimiento de la depuradora. Es un trabajo manual: retiramos todo lo que obstruye el sistema y añadimos bacterias que reducen los malos olores.",
+      "imagen": "img/agua/mantenimiento.webp",
+      "alt": "Técnico trabajando en una instalación de tratamiento de agua",
+      "aplicaciones": [],
+      "especificaciones": [],
+      "galeria": [],
+      "documentos": [],
+      "faq": [],
+      "provisional": false,
+      "seo": {
+        "titulo": "Mantenimiento de depuradoras en Tenerife | PID Agua",
+        "descripcion": "Mantenimiento de depuradoras en Tenerife: vamos a tu empresa, retiramos a mano lo que obstruye y añadimos bacterias que reducen los olores. PID Agua."
+      },
+      "letra": "E",
+      "bloquesExtra": [
+        {
+          "titulo": "Cómo lo hacemos",
+          "numerado": true,
+          "items": [
+            "Nos desplazamos a tu empresa o instalación.",
+            "Limpieza manual: retiramos todo lo que obstruye la depuradora.",
+            "Añadimos bacterias que reducen los malos olores."
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "imagenHero": "img/agua/horizontal-soportes.webp"
 }

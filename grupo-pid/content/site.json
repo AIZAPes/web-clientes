@@ -6,69 +6,130 @@
   "cif": "",
   "dominio": "",
   "lema": "Soluciones avanzadas en PRFV, tratamiento de agua y pultrusión",
-  "modoRevision": true,
-
+  "modoRevision": false,
   "contacto": {
-    "telefono": "",
-    "whatsapp": "",
-    "email": "",
-    "direccion": "",
-    "horario": "",
-    "mapaUrl": ""
+    "telefono": "922 83 02 31",
+    "whatsapp": "+34 605 888 039",
+    "email": "info@grupopid.com",
+    "direccion": "Polígono Industrial El Aserradero, Carretera General del Tanque Bajo, s/n, 38435 El Tanque, Santa Cruz de Tenerife",
+    "horario": "Lunes a jueves: 8:00–15:00 · Viernes: 8:00–13:30 · Sábado y domingo: cerrado",
+    "mapaUrl": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc6a882bd3be8c4d:0x76febbbea6b01d86",
+    "direccionCorta": "Pol. Ind. El Aserradero, El Tanque (Tenerife)"
   },
-
   "emailsDestino": {
     "_ayuda": "A quién llega cada solicitud del formulario según la división elegida. Si una está vacía, se usa 'general'.",
-    "general": "",
+    "general": "info@grupopid.com",
     "pid-agua": "",
     "pultrusion-canarias": "",
     "piscinas-optimus": ""
   },
-
   "formulario": {
     "endpoint": "/enviar.php",
     "maxArchivosMB": 10,
     "tiposArchivo": ".pdf,.jpg,.jpeg,.png,.webp,.dwg,.dxf,.zip"
   },
-
   "google": {
     "searchConsoleVerificacion": "",
     "analyticsId": ""
   },
-
   "redes": {
     "linkedin": "",
     "instagram": "",
     "facebook": "",
     "youtube": ""
   },
-
   "areas": [
-    { "icono": "capas", "nombre": "PRFV" },
-    { "icono": "gota", "nombre": "Tratamiento de agua" },
-    { "icono": "almohadilla", "nombre": "Pultrusión" },
-    { "icono": "escalera", "nombre": "Piscinas" },
-    { "icono": "engranaje", "nombre": "Mantenimientos e ingeniería" }
+    {
+      "icono": "capas",
+      "nombre": "PRFV"
+    },
+    {
+      "icono": "gota",
+      "nombre": "Tratamiento de agua"
+    },
+    {
+      "icono": "almohadilla",
+      "nombre": "Pultrusión"
+    },
+    {
+      "icono": "escalera",
+      "nombre": "Piscinas"
+    },
+    {
+      "icono": "engranaje",
+      "nombre": "Mantenimientos e ingeniería"
+    }
   ],
-
   "cifras": [
-    { "valor": "", "etiqueta": "Años de experiencia" },
-    { "valor": "", "etiqueta": "Proyectos realizados" },
-    { "valor": "", "etiqueta": "Capacidad de fabricación" },
-    { "valor": "", "etiqueta": "Islas / zonas de servicio" }
+    {
+      "valor": "",
+      "etiqueta": "Años de experiencia"
+    },
+    {
+      "valor": "",
+      "etiqueta": "Proyectos realizados"
+    },
+    {
+      "valor": "",
+      "etiqueta": "Capacidad de fabricación"
+    },
+    {
+      "valor": "",
+      "etiqueta": "Islas / zonas de servicio"
+    }
   ],
-
+  "clientes": {
+    "_ayuda": "Logos de clientes del carrusel de inicio. Archivos en src/static/img/clientes/ (WebP con fondo transparente).",
+    "titulo": "Empresas e instituciones que confían en Grupo PID",
+    "logos": [
+      {
+        "nombre": "Dragados",
+        "logo": "img/clientes/dragados.webp"
+      },
+      {
+        "nombre": "Loro Parque",
+        "logo": "img/clientes/loro-parque.webp"
+      },
+      {
+        "nombre": "Mercadona",
+        "logo": "img/clientes/mercadona.webp"
+      },
+      {
+        "nombre": "Gobierno de Canarias",
+        "logo": "img/clientes/gobierno-de-canarias.webp"
+      },
+      {
+        "nombre": "Drexmin",
+        "logo": "img/clientes/drexmin.webp"
+      },
+      {
+        "nombre": "AMLD",
+        "logo": "img/clientes/amld.webp"
+      },
+      {
+        "nombre": "Grupo Tragsa",
+        "logo": "img/clientes/grupo-tragsa.webp"
+      },
+      {
+        "nombre": "Titsa",
+        "logo": "img/clientes/titsa.webp"
+      },
+      {
+        "nombre": "Ferrovial",
+        "logo": "img/clientes/ferrovial.webp"
+      }
+    ]
+  },
   "inicio": {
     "seo": {
       "titulo": "Grupo PID | Soluciones en PRFV, tratamiento de agua y piscinas",
-      "descripcion": "Grupo PID reúne PID Agua, Pultrusión Canarias y Piscinas Optimus: depósitos de PRFV, depuradoras, fosas sépticas, estructuras de PRFV y piscinas."
+      "descripcion": "Grupo PID, en Tenerife: depósitos de PRFV, fosas sépticas y depuradoras, estructuras de PRFV y piscinas de poliéster. Pide presupuesto sin compromiso."
     },
-    "titular": "Soluciones avanzadas en PRFV, tratamiento de agua y piscinas",
-    "subtitulo": "Tres divisiones especializadas bajo una misma marca: depósitos y depuración de aguas, perfiles y estructuras de PRFV, y piscinas.",
-    "imagenHero": "",
-    "altHero": "Instalación industrial de Grupo PID"
+    "titular": "Soluciones en PRFV",
+    "subtitulo": "Fabricamos e instalamos depósitos, sistemas de tratamiento de agua, estructuras de PRFV y piscinas desde El Tanque, Tenerife.",
+    "imagenHero": "img/fachada-grupo-pid.webp",
+    "altHero": "Fachada de las instalaciones de Grupo PID en El Tanque (Tenerife)"
   },
-
   "sobre": {
     "seo": {
       "titulo": "Sobre Grupo PID | Empresa y divisiones",
@@ -76,6 +137,14 @@
     },
     "historia": "",
     "mision": "",
-    "imagen": ""
+    "imagen": "img/fachada-grupo-pid.webp"
+  },
+  "resenas": {
+    "_ayuda": "Reseñas de Google en la portada, en directo desde la API de Google Places (archivo resenas.php, requiere PHP). Pon el Place ID del negocio en placeId (recomendado) o deja placeId vacío y resenas.php lo buscará una vez con el texto de busqueda. La clave de la API va SOLO en el hosting, en resenas-clave.php (ver LEEME.md). maxConsultasDia limita las consultas a Google para no salir del tramo gratuito (1.000 al mes). Si no hay clave o falla la consulta, la sección no se muestra.",
+    "activo": true,
+    "titulo": "Lo que dicen nuestros clientes",
+    "placeId": "",
+    "busqueda": "Grupo PID Canarias, El Tanque, Tenerife",
+    "maxConsultasDia": 30
   }
 }

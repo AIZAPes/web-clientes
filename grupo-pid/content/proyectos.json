@@ -2,64 +2,124 @@
   "_ayuda": "Proyectos realizados. division: pid-agua | pultrusion-canarias | piscinas-optimus. imagen: ruta dentro de src/static/ (p. ej. img/proyectos/obra-1.webp). Los proyectos sin imagen y con pendiente:true son huecos de ejemplo: bórralos al añadir los reales.",
   "proyectos": [
     {
-      "titulo": "Instalación de depósitos",
+      "titulo": "Tanque modular de PRFV",
       "division": "pid-agua",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/agua/tanque-modular.webp",
+      "alt": "Tanque modular de PRFV",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
     },
     {
-      "titulo": "Estructura de PRFV",
+      "titulo": "Plataforma y pasarela de PRFV en presa",
       "division": "pultrusion-canarias",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/pultrusion/plataforma-presa.webp",
+      "alt": "Plataforma y pasarela de PRFV en presa",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
     },
     {
-      "titulo": "Instalación de piscina",
+      "titulo": "Piscina con cascada",
       "division": "piscinas-optimus",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/piscinas/piscina-cascada.webp",
+      "alt": "Piscina con cascada",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
     },
     {
-      "titulo": "Depuradora",
+      "titulo": "Depósitos horizontales de PRFV",
       "division": "pid-agua",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/agua/deposito-horizontal-instalado.webp",
+      "alt": "Depósitos horizontales de PRFV",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
     },
     {
-      "titulo": "Perfiles a medida",
+      "titulo": "Escalera y pasarela de PRFV",
       "division": "pultrusion-canarias",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/pultrusion/escalera-pasarela.webp",
+      "alt": "Escalera y pasarela de PRFV",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
+    },
+    {
+      "titulo": "Piscina con tarima",
+      "division": "piscinas-optimus",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/piscinas/piscina-tarima.webp",
+      "alt": "Piscina con tarima",
+      "descripcion": "",
+      "pendiente": false
+    },
+    {
+      "titulo": "Planta de tratamiento de agua",
+      "division": "pid-agua",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/agua/planta-tratamiento.webp",
+      "alt": "Planta de tratamiento de agua",
+      "descripcion": "",
+      "pendiente": false
+    },
+    {
+      "titulo": "Plataforma de PRFV sobre silos",
+      "division": "pultrusion-canarias",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/pultrusion/plataforma-silos.webp",
+      "alt": "Plataforma de PRFV sobre silos",
+      "descripcion": "",
+      "pendiente": false
+    },
+    {
+      "titulo": "Descarga de piscina con grúa",
+      "division": "piscinas-optimus",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/piscinas/descarga-grua.webp",
+      "alt": "Descarga de piscina con grúa",
+      "descripcion": "",
+      "pendiente": false
+    },
+    {
+      "titulo": "Colocación de depósito troncocónico",
+      "division": "pid-agua",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/agua/troncoconico-colocacion.webp",
+      "alt": "Colocación de depósito troncocónico",
+      "descripcion": "",
+      "pendiente": false
+    },
+    {
+      "titulo": "Escalera de gato con jaula",
+      "division": "pultrusion-canarias",
+      "lugar": "",
+      "anio": "",
+      "imagen": "img/pultrusion/escalera-gato.webp",
+      "alt": "Escalera de gato con jaula",
+      "descripcion": "",
+      "pendiente": false
     },
     {
       "titulo": "Piscina terminada",
       "division": "piscinas-optimus",
       "lugar": "",
       "anio": "",
-      "imagen": "",
-      "alt": "",
+      "imagen": "img/piscinas/piscina-terminada.webp",
+      "alt": "Piscina terminada",
       "descripcion": "",
-      "pendiente": true
+      "pendiente": false
     }
   ]
 }

@@ -1,187 +1,1053 @@
 {
-  "_ayuda": "Catálogo de Piscinas Optimus: 8 espacios (7 tipos de piscina + 1 categoría adicional). Al conocer el nombre real de un modelo, cambia nombre, quita nombrePendiente y, si quieres, el slug (la URL); en ese caso añade una redirección en src/static/.htaccess.",
+  "_ayuda": "Catálogo de Piscinas Optimus: modelos de piscina de poliéster (fichas técnicas en PDF en src/static/docs/piscinas/) y piscinas a medida.",
   "id": "piscinas-optimus",
   "nombre": "Piscinas Optimus",
   "tema": "optimus",
   "logo": "img/logos/piscinas-optimus.png",
   "claim": "Nueva generación",
   "resumen": "Soluciones y modelos de piscinas.",
-  "imagen": "",
-  "alt": "Piscina Optimus",
+  "imagen": "img/piscinas/piscina-tarima.webp",
+  "alt": "Piscina de poliéster instalada con tarima de madera",
   "destacados": [
-    "7 tipos de piscina",
-    "Categoría adicional",
-    "Galería de modelos"
+    "11 modelos de piscina",
+    "Piscinas a medida",
+    "Ficha técnica de cada modelo"
   ],
   "seo": {
-    "titulo": "Piscinas Optimus | Modelos de piscinas",
-    "descripcion": "Piscinas Optimus, división de Grupo PID: catálogo de modelos de piscinas. Consulta cada modelo y solicita presupuesto."
+    "titulo": "Piscinas de poliéster en Tenerife | Piscinas Optimus",
+    "descripcion": "Piscinas prefabricadas de poliéster de una sola pieza: 11 modelos de 3 a 9 m y piscinas a medida, con ficha técnica. Piscinas Optimus, de Grupo PID."
   },
   "hero": {
-    "titulo": "Piscinas de nueva generación",
-    "texto": "Descubre los modelos de Piscinas Optimus y solicita tu presupuesto.",
-    "provisional": true
+    "titulo": "Piscinas de poliéster de una sola pieza",
+    "texto": "Piscinas prefabricadas con resinas y reforzadas con fibra de vidrio: instalación sencilla y rápida, gran resistencia y fácil mantenimiento."
   },
   "secciones": [
     {
-      "slug": "modelo-1",
-      "nombre": "Modelo 1",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 1",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "capri",
+      "nombre": "Modelo Capri",
+      "resumen": "5,5 × 2,5 m · 1,17–1,27 m de profundidad",
+      "descripcion": "Piscina rectangular con una amplia escalinata que ocupa todo un extremo: una playa y dos escalones para entrar al agua poco a poco. La zona de acceso es tan amplia que sirve para sentarse y relajarse. Pensada para jardines amplios.",
+      "imagen": "img/piscinas/capri-01.webp",
+      "alt": "Piscina de poliéster modelo Capri",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "5,50 × 2,50 m"
+        ],
+        [
+          "Medidas exteriores",
+          "6,05 × 2,80 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,17 a 1,27 m"
+        ],
+        [
+          "Capacidad",
+          "16.000 litros"
+        ],
+        [
+          "Peso",
+          "400 kg"
+        ],
+        [
+          "Escalera",
+          "Playa y 2 escalones"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/capri-02.webp",
+          "alt": "Piscina de poliéster modelo Capri"
+        },
+        {
+          "src": "img/piscinas/capri-03.webp",
+          "alt": "Piscina de poliéster modelo Capri"
+        },
+        {
+          "src": "img/piscinas/capri-04.webp",
+          "alt": "Plano en planta de la piscina Capri"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Capri",
+          "url": "docs/piscinas/ficha-tecnica-capri.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 1 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 1. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Capri 5,5 × 2,5 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Capri: 5,5 × 2,5 m, profundidad de 1,17 a 1,27 m y 16.000 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "5,5 × 2,5 m"
+        ],
+        [
+          "Profundidad",
+          "1,17–1,27 m"
+        ],
+        [
+          "Capacidad",
+          "16.000 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-2",
-      "nombre": "Modelo 2",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 2",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "bari",
+      "nombre": "Modelo Bari",
+      "resumen": "3,04 × 1,79 m · 1,18 m de profundidad",
+      "descripcion": "Piscina rectangular y compacta, la más pequeña del catálogo. Tiene escalones de acceso y un banco lateral integrado para sentarte dentro del agua. Ideal para patios y jardines pequeños.",
+      "imagen": "img/piscinas/bari-01.webp",
+      "alt": "Piscina de poliéster modelo Bari",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "3,04 × 1,79 m"
+        ],
+        [
+          "Medidas exteriores",
+          "3,58 × 2,03 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "1,18 m"
+        ],
+        [
+          "Capacidad",
+          "6.400 litros"
+        ],
+        [
+          "Peso",
+          "200 kg"
+        ],
+        [
+          "Escalera",
+          "3 escalones"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/bari-02.webp",
+          "alt": "Piscina de poliéster modelo Bari"
+        },
+        {
+          "src": "img/piscinas/bari-03.webp",
+          "alt": "Piscina de poliéster modelo Bari"
+        },
+        {
+          "src": "img/piscinas/bari-04.webp",
+          "alt": "Plano en planta de la piscina Bari"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Bari",
+          "url": "docs/piscinas/ficha-tecnica-bari.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 2 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 2. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Bari 3,04 × 1,79 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Bari: 3,04 × 1,79 m, profundidad de 1,18 m y 6.400 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "3,04 × 1,79 m"
+        ],
+        [
+          "Profundidad",
+          "1,18 m"
+        ],
+        [
+          "Capacidad",
+          "6.400 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-3",
-      "nombre": "Modelo 3",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 3",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "bolonia",
+      "nombre": "Modelo Bolonia",
+      "resumen": "5,2 × 2 m · 1,40 m de profundidad",
+      "descripcion": "Piscina alargada y estrecha que aprovecha al máximo las parcelas rectangulares, adosados y chalets con poco ancho. Tiene una escalera de esquina en abanico y un largo banco lateral para disfrutar del baño en compañía.",
+      "imagen": "img/piscinas/bolonia-01.webp",
+      "alt": "Piscina de poliéster modelo Bolonia",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "5,20 × 2,00 m"
+        ],
+        [
+          "Medidas exteriores",
+          "5,75 × 2,30 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "1,40 m"
+        ],
+        [
+          "Capacidad",
+          "14.560 litros"
+        ],
+        [
+          "Peso",
+          "450 kg"
+        ],
+        [
+          "Escalera",
+          "Escalera de esquina en abanico con 4 peldaños"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/bolonia-02.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-03.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-04.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-05.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-06.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-07.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-08.webp",
+          "alt": "Piscina de poliéster modelo Bolonia"
+        },
+        {
+          "src": "img/piscinas/bolonia-09.webp",
+          "alt": "Plano en planta de la piscina Bolonia"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Bolonia",
+          "url": "docs/piscinas/ficha-tecnica-bolonia.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 3 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 3. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Bolonia 5,2 × 2 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Bolonia: 5,2 × 2 m, profundidad de 1,40 m y 14.560 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "5,2 × 2 m"
+        ],
+        [
+          "Profundidad",
+          "1,40 m"
+        ],
+        [
+          "Capacidad",
+          "14.560 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-4",
-      "nombre": "Modelo 4",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 4",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "cerdena",
+      "nombre": "Modelo Cerdeña",
+      "resumen": "7,1 × 3,3 m · 1,10–1,58 m de profundidad",
+      "descripcion": "Piscina grande de forma rectangular, con las esquinas redondeadas y el suelo en desnivel. Delante de los escalones tiene una zona de isla menos profunda. Pensada para jardines y patios amplios.",
+      "imagen": "img/piscinas/cerdena-01.webp",
+      "alt": "Piscina de poliéster modelo Cerdeña",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "7,10 × 3,30 m"
+        ],
+        [
+          "Medidas exteriores",
+          "7,65 × 3,50 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,10 a 1,58 m"
+        ],
+        [
+          "Capacidad",
+          "22.500 litros"
+        ],
+        [
+          "Peso",
+          "630 kg"
+        ],
+        [
+          "Escalera",
+          "2 peldaños y banco corrido"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 3 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/cerdena-02.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-03.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-04.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-05.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-06.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-07.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        },
+        {
+          "src": "img/piscinas/cerdena-08.webp",
+          "alt": "Piscina de poliéster modelo Cerdeña"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Cerdeña",
+          "url": "docs/piscinas/ficha-tecnica-cerdena.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 4 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 4. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Cerdeña 7,1 × 3,3 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Cerdeña: 7,1 × 3,3 m, profundidad de 1,10 a 1,58 m y 22.500 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "7,1 × 3,3 m"
+        ],
+        [
+          "Profundidad",
+          "1,10–1,58 m"
+        ],
+        [
+          "Capacidad",
+          "22.500 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-5",
-      "nombre": "Modelo 5",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 5",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "genova",
+      "nombre": "Modelo Génova",
+      "resumen": "9 × 3,3 m · 1,10–1,80 m de profundidad",
+      "descripcion": "El modelo más grande del catálogo: 9 metros de largo, esquinas redondeadas y suelo en desnivel. Tiene escalones para entrar y salir cómodamente y, delante de ellos, una zona de isla menos profunda.",
+      "imagen": "img/piscinas/genova-01.webp",
+      "alt": "Piscina de poliéster modelo Génova",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "9,00 × 3,30 m"
+        ],
+        [
+          "Medidas exteriores",
+          "9,55 × 3,50 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,10 a 1,80 m"
+        ],
+        [
+          "Capacidad",
+          "33.500 litros"
+        ],
+        [
+          "Peso",
+          "930 kg"
+        ],
+        [
+          "Escalera",
+          "2 peldaños y banco corrido"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 3 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/genova-02.webp",
+          "alt": "Piscina de poliéster modelo Génova"
+        },
+        {
+          "src": "img/piscinas/genova-03.webp",
+          "alt": "Piscina de poliéster modelo Génova"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Génova",
+          "url": "docs/piscinas/ficha-tecnica-genova.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 5 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 5. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Génova 9 × 3,3 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Génova: 9 × 3,3 m, profundidad de 1,10 a 1,80 m y 33.500 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "9 × 3,3 m"
+        ],
+        [
+          "Profundidad",
+          "1,10–1,80 m"
+        ],
+        [
+          "Capacidad",
+          "33.500 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-6",
-      "nombre": "Modelo 6",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 6",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "isla-milan",
+      "nombre": "Modelo Isla Milán",
+      "resumen": "8 × 3,3 m · 1,10–1,80 m de profundidad",
+      "descripcion": "Piscina rectangular de gran tamaño con el suelo en desnivel. La escalera está en un lateral y junto a ella hay una pequeña zona de isla menos profunda, además de un banco corrido. Pensada para espacios exteriores grandes.",
+      "imagen": "img/piscinas/isla-milan-01.webp",
+      "alt": "Piscina de poliéster modelo Isla Milán",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "8,00 × 3,30 m"
+        ],
+        [
+          "Medidas exteriores",
+          "8,55 × 3,50 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,10 a 1,80 m"
+        ],
+        [
+          "Capacidad",
+          "32.500 litros"
+        ],
+        [
+          "Peso",
+          "800 kg"
+        ],
+        [
+          "Escalera",
+          "3 peldaños y banco corrido lateral"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 3 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/isla-milan-02.webp",
+          "alt": "Piscina de poliéster modelo Isla Milán"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Isla Milán",
+          "url": "docs/piscinas/ficha-tecnica-isla-milan.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 6 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 6. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Isla Milán 8 × 3,3 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Isla Milán: 8 × 3,3 m, profundidad de 1,10 a 1,80 m y 32.500 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "8 × 3,3 m"
+        ],
+        [
+          "Profundidad",
+          "1,10–1,80 m"
+        ],
+        [
+          "Capacidad",
+          "32.500 litros"
+        ]
+      ]
     },
     {
-      "slug": "modelo-7",
-      "nombre": "Modelo 7",
-      "nombrePendiente": true,
-      "resumen": "Nombre, fotografía y características pendientes.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscina Optimus, modelo 7",
-      "caracteristicas": [],
-      "aplicaciones": [],
-      "especificaciones": [],
-      "galeria": [],
-      "documentos": [],
+      "slug": "pisa",
+      "nombre": "Modelo Pisa",
+      "resumen": "3,8 × 2,15 m · 1,00 m de profundidad",
+      "descripcion": "Piscina pequeña con las esquinas redondeadas, el suelo plano y 1 metro de profundidad. Los escalones están en uno de los lados. Una buena opción para patios y jardines donde hay que aprovechar cada metro.",
+      "imagen": "img/piscinas/pisa-01.webp",
+      "alt": "Piscina de poliéster modelo Pisa",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "3,80 × 2,15 m"
+        ],
+        [
+          "Medidas exteriores",
+          "4,35 × 2,45 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "1,00 m"
+        ],
+        [
+          "Capacidad",
+          "8.000 litros"
+        ],
+        [
+          "Peso",
+          "300 kg"
+        ],
+        [
+          "Escalera",
+          "2 peldaños"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/pisa-02.webp",
+          "alt": "Piscina de poliéster modelo Pisa"
+        },
+        {
+          "src": "img/piscinas/pisa-03.webp",
+          "alt": "Piscina de poliéster modelo Pisa"
+        },
+        {
+          "src": "img/piscinas/pisa-04.webp",
+          "alt": "Piscina de poliéster modelo Pisa"
+        },
+        {
+          "src": "img/piscinas/pisa-05.webp",
+          "alt": "Piscina de poliéster modelo Pisa"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Pisa",
+          "url": "docs/piscinas/ficha-tecnica-pisa.pdf"
+        }
+      ],
       "faq": [],
-      "provisional": true,
       "seo": {
-        "titulo": "Piscina Optimus modelo 7 | Piscinas Optimus",
-        "descripcion": "Piscina Optimus modelo 7. Características, galería y presupuesto. Piscinas Optimus, división de Grupo PID."
-      }
+        "titulo": "Piscina de poliéster Pisa 3,8 × 2,15 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Pisa: 3,8 × 2,15 m, profundidad de 1,00 m y 8.000 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "3,8 × 2,15 m"
+        ],
+        [
+          "Profundidad",
+          "1,00 m"
+        ],
+        [
+          "Capacidad",
+          "8.000 litros"
+        ]
+      ]
     },
     {
-      "slug": "categoria-adicional",
-      "nombre": "Categoría adicional",
-      "nombrePendiente": true,
-      "resumen": "Espacio reservado para una categoría adicional.",
-      "descripcion": "",
-      "imagen": "",
-      "alt": "Piscinas Optimus, categoría adicional",
-      "caracteristicas": [],
+      "slug": "roma",
+      "nombre": "Modelo Roma",
+      "resumen": "6 × 3 m · 1,20–1,60 m de profundidad",
+      "descripcion": "Piscina rectangular con un extremo semicircular, donde se sitúan los escalones de acceso. Tiene el suelo en desnivel y un tamaño pensado para jardines y patios medianos o grandes.",
+      "imagen": "img/piscinas/roma-01.webp",
+      "alt": "Piscina de poliéster modelo Roma",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "6,00 × 3,00 m"
+        ],
+        [
+          "Medidas exteriores",
+          "6,55 × 3,30 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,20 a 1,60 m"
+        ],
+        [
+          "Capacidad",
+          "20.000 litros"
+        ],
+        [
+          "Peso",
+          "450 kg"
+        ],
+        [
+          "Escalera",
+          "2 peldaños y banco corrido"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/roma-02.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-03.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-04.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-05.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-06.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-07.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-08.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        },
+        {
+          "src": "img/piscinas/roma-09.webp",
+          "alt": "Piscina de poliéster modelo Roma"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Roma",
+          "url": "docs/piscinas/ficha-tecnica-roma.pdf"
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "titulo": "Piscina de poliéster Roma 6 × 3 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Roma: 6 × 3 m, profundidad de 1,20 a 1,60 m y 20.000 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "6 × 3 m"
+        ],
+        [
+          "Profundidad",
+          "1,20–1,60 m"
+        ],
+        [
+          "Capacidad",
+          "20.000 litros"
+        ]
+      ]
+    },
+    {
+      "slug": "siena",
+      "nombre": "Modelo Siena",
+      "resumen": "4 × 2 m · 1,40 m de profundidad",
+      "descripcion": "Piscina rectangular para jardines de tamaño medio, con escalones de acceso y un amplio banco lateral para relajarte dentro del agua.",
+      "imagen": "img/piscinas/siena-01.webp",
+      "alt": "Piscina de poliéster modelo Siena",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "4,00 × 2,00 m"
+        ],
+        [
+          "Medidas exteriores",
+          "4,55 × 2,30 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "1,40 m"
+        ],
+        [
+          "Capacidad",
+          "11.200 litros"
+        ],
+        [
+          "Peso",
+          "340 kg"
+        ],
+        [
+          "Escalera",
+          "Banco corrido y 3 escalones"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/siena-02.webp",
+          "alt": "Plano en planta de la piscina Siena"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Siena",
+          "url": "docs/piscinas/ficha-tecnica-siena.pdf"
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "titulo": "Piscina de poliéster Siena 4 × 2 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Siena: 4 × 2 m, profundidad de 1,40 m y 11.200 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "4 × 2 m"
+        ],
+        [
+          "Profundidad",
+          "1,40 m"
+        ],
+        [
+          "Capacidad",
+          "11.200 litros"
+        ]
+      ]
+    },
+    {
+      "slug": "venecia",
+      "nombre": "Modelo Venecia",
+      "resumen": "5 × 2,8 m · 1,10–1,50 m de profundidad",
+      "descripcion": "Piscina rectangular con un extremo semicircular donde está la escalera romana. El suelo está en desnivel y sus medidas encajan en jardines y patios de tamaño medio.",
+      "imagen": "img/piscinas/venecia-01.webp",
+      "alt": "Piscina de poliéster modelo Venecia",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "5,00 × 2,80 m"
+        ],
+        [
+          "Medidas exteriores",
+          "5,55 × 3,10 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,10 a 1,50 m"
+        ],
+        [
+          "Capacidad",
+          "14.000 litros"
+        ],
+        [
+          "Peso",
+          "400 kg"
+        ],
+        [
+          "Escalera",
+          "Escalera romana de 3 peldaños"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 2 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/venecia-02.webp",
+          "alt": "Piscina de poliéster modelo Venecia"
+        },
+        {
+          "src": "img/piscinas/venecia-03.webp",
+          "alt": "Piscina de poliéster modelo Venecia"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Venecia",
+          "url": "docs/piscinas/ficha-tecnica-venecia.pdf"
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "titulo": "Piscina de poliéster Venecia 5 × 2,8 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Venecia: 5 × 2,8 m, profundidad de 1,10 a 1,50 m y 14.000 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "5 × 2,8 m"
+        ],
+        [
+          "Profundidad",
+          "1,10–1,50 m"
+        ],
+        [
+          "Capacidad",
+          "14.000 litros"
+        ]
+      ]
+    },
+    {
+      "slug": "sicilia",
+      "nombre": "Modelo Sicilia",
+      "resumen": "6,1 × 3,3 m · 1,20–1,60 m de profundidad",
+      "descripcion": "Piscina rectangular con un lado semicircular, donde se sitúan los escalones de acceso. Tiene el suelo en desnivel y un banco corrido. Pensada para jardines y patios medianos o grandes.",
+      "imagen": "img/piscinas/sicilia-01.webp",
+      "alt": "Piscina de poliéster modelo Sicilia",
+      "aplicaciones": [
+        "Instalación sencilla, rápida y limpia",
+        "Gran resistencia",
+        "Fácil mantenimiento",
+        "Posibilidad de desmontarse para su traslado",
+        "Uso inmediato"
+      ],
+      "etiquetaAplicaciones": "Ventajas",
+      "especificaciones": [
+        [
+          "Medidas interiores",
+          "6,10 × 3,30 m"
+        ],
+        [
+          "Medidas exteriores",
+          "6,65 × 3,50 m (con pestañas y skimmer)"
+        ],
+        [
+          "Profundidad",
+          "De 1,20 a 1,60 m"
+        ],
+        [
+          "Capacidad",
+          "22.000 litros"
+        ],
+        [
+          "Peso",
+          "500 kg"
+        ],
+        [
+          "Escalera",
+          "2 peldaños y banco corrido"
+        ],
+        [
+          "Equipamiento",
+          "Skimmer central, 3 chorros de impulsión, 1 sumidero y 1 boca de limpiafondos"
+        ]
+      ],
+      "galeria": [
+        {
+          "src": "img/piscinas/sicilia-02.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-03.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-04.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-05.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-06.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-07.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        },
+        {
+          "src": "img/piscinas/sicilia-08.webp",
+          "alt": "Piscina de poliéster modelo Sicilia"
+        }
+      ],
+      "documentos": [
+        {
+          "titulo": "Ficha técnica del modelo Sicilia",
+          "url": "docs/piscinas/ficha-tecnica-sicilia.pdf"
+        }
+      ],
+      "faq": [],
+      "seo": {
+        "titulo": "Piscina de poliéster Sicilia 6,1 × 3,3 m | Piscinas Optimus",
+        "descripcion": "Piscina prefabricada de poliéster Sicilia: 6,1 × 3,3 m, profundidad de 1,20 a 1,60 m y 22.000 litros. Descarga la ficha técnica y pide presupuesto."
+      },
+      "datos": [
+        [
+          "Medidas",
+          "6,1 × 3,3 m"
+        ],
+        [
+          "Profundidad",
+          "1,20–1,60 m"
+        ],
+        [
+          "Capacidad",
+          "22.000 litros"
+        ]
+      ]
+    },
+    {
+      "slug": "piscinas-a-medida",
+      "nombre": "Piscinas a medida",
+      "resumen": "Piscinas de poliéster fabricadas a la medida de tu espacio.",
+      "descripcion": "Además de nuestros modelos, fabricamos piscinas de poliéster a medida para adaptarnos a cada espacio.",
+      "imagen": "img/piscinas/a-medida.webp",
+      "alt": "Piscina de poliéster a medida instalada con vistas a la montaña",
       "aplicaciones": [],
       "especificaciones": [],
-      "galeria": [],
       "documentos": [],
       "faq": [],
       "provisional": true,
+      "galeria": [
+        {
+          "src": "img/piscinas/a-medida-590.webp",
+          "alt": "Piscina a medida instalada en terraza"
+        },
+        {
+          "src": "img/piscinas/a-medida-400.webp",
+          "alt": "Vaso de piscina de poliéster en taller"
+        },
+        {
+          "src": "img/piscinas/a-medida-2.webp",
+          "alt": "Vaso de piscina de poliéster a medida"
+        },
+        {
+          "src": "img/piscinas/a-medida-3.webp",
+          "alt": "Piscina de poliéster a medida con escaleras"
+        },
+        {
+          "src": "img/piscinas/a-medida-noche.webp",
+          "alt": "Piscina de poliéster iluminada de noche"
+        }
+      ],
       "seo": {
-        "titulo": "Piscinas Optimus | Categoría adicional",
-        "descripcion": "Piscinas Optimus, división de Grupo PID. Solicita presupuesto."
+        "titulo": "Piscinas de poliéster a medida | Piscinas Optimus",
+        "descripcion": "Piscinas de poliéster a medida para adaptarse a tu espacio. Piscinas Optimus, de Grupo PID, en Tenerife. Cuéntanos tu proyecto y pide presupuesto."
       }
     }
-  ]
+  ],
+  "imagenHero": "img/piscinas/piscina-cascada.webp"
 }
