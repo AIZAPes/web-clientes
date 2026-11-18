@@ -11,6 +11,11 @@ Leer primero: [ARQUITECTURA.md](ARQUITECTURA.md) (mapa de navegación y componen
 - Vista previa: `node tools/servir.mjs 5180` (configuración `grupo-pid` en `.claude/launch.json`). El POST del formulario en local responde con un aviso (no hay PHP).
 - Logos de división: originales a color (`img/logos/*-color.*`) sobre placa blanca. Los antiguos recortes de `tools/referencia-marcas.jpg` ya no se usan.
 
+## Vista previa para el cliente (GitHub Pages)
+- Enlace: https://aizapes.github.io/web-clientes/grupo-pid/ (repositorio público desde 2026-11-18; Pages publica la rama `gh-pages`, carpeta raíz).
+- Republicar tras cambios: `node src/build.mjs`, luego `node tools/vista_previa.mjs <worktree-gh-pages>/grupo-pid web-clientes/grupo-pid` (base sin barra inicial: Git Bash reescribe rutas que empiezan por `/`), commit en `gh-pages` y push.
+- La copia lleva `noindex` y no incluye PHP: en la vista previa no funcionan el formulario ni las reseñas.
+
 ## Reglas del cliente
 - **No inventar nada**: ni contacto, ni cifras, ni especificaciones, ni nombres de modelos. Lo que falta se marca como pendiente (`modoRevision: true` en `content/site.json`; ponerlo a `false` al publicar).
 - Textos redactados como base llevan `"provisional": true`. Ventajas/aplicaciones del PRFV son genéricas y están marcadas «validar con la empresa».
